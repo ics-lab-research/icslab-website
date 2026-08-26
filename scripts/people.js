@@ -1,7 +1,6 @@
 const peopleDirectory = document.querySelector("[data-people-directory]");
 const peopleTabs = [...document.querySelectorAll("[data-people-tab]")];
 const peopleTotal = document.querySelector("[data-people-total]");
-const peopleCount = document.querySelector("[data-people-count]");
 const peopleKicker = document.querySelector("[data-people-kicker]");
 const peopleTitle = document.querySelector("[data-people-title]");
 
@@ -92,7 +91,6 @@ const renderPeople = (members, groupKey, updateHistory = false) => {
   });
   peopleKicker.textContent = group.label;
   peopleTitle.textContent = group.title;
-  peopleCount.textContent = visibleMembers.length;
   peopleDirectory.replaceChildren(
     ...visibleMembers.map((member) => createPersonCard(member, group.label)),
   );

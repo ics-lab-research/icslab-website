@@ -1,7 +1,5 @@
 const recentPublications = document.querySelector("[data-publications-recent]");
 const publicationArchive = document.querySelector("[data-publications-all]");
-const publicationCount = document.querySelector("[data-publication-count]");
-const publicationRetrieved = document.querySelector("[data-publication-retrieved]");
 
 const publicationTypeLabel = (publication) => {
   const type = publication.type === "legacy" ? publication.legacyType : publication.type;
@@ -125,11 +123,6 @@ if (recentPublications || publicationArchive) {
       const membersById = new Map(memberData.members.map((member) => [member.id, member]));
       renderRecentPublications(visiblePublications, membersById);
       renderPublicationArchive(visiblePublications, membersById);
-      if (publicationCount) publicationCount.textContent = visiblePublications.length;
-      if (publicationRetrieved) {
-        publicationRetrieved.dateTime = publicationData.retrieved;
-        publicationRetrieved.textContent = publicationData.retrieved;
-      }
     })
     .catch(showPublicationError);
 }
