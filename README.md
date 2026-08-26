@@ -32,6 +32,10 @@ domain in GitHub **Settings → Pages**, then update DNS.
 ## Content updates
 
 - Main content: `index.html`
+- International publications: `data/publications.json`
+- Publication page structure: `publications.html`
+- Domestic publication placeholder: `domestic-publications.html`
 - Design: `styles.css`
 - Mobile navigation: `script.js`
+- Publication rendering: `publications.js`
 - Images: `assets/`

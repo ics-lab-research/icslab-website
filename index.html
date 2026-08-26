@@ -23,6 +23,7 @@
     <link rel="canonical" href="https://ics-lab-research.github.io/icslab-website/" />
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
+    <script src="publications.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -49,7 +50,7 @@
         <nav class="site-nav" id="site-navigation" aria-label="Main navigation" data-menu>
           <a href="#about">About</a>
           <a href="#research">Research</a>
-          <a href="#publications">Publications</a>
+          <a href="publications.html">Publications</a>
           <a href="#news">News</a>
           <a href="#people">People</a>
           <a class="nav-cta" href="#join">Join us</a>
@@ -231,56 +232,19 @@
               ICSLab publishes across measurement science, signal processing,
               embedded AI, and intelligent inspection.
             </p>
-            <a class="text-link light-link" href="mailto:huy.leminh@phenikaa-uni.edu.vn">
-              Request the full publication list <span aria-hidden="true">↗</span>
+            <a class="text-link light-link" href="publications.html">
+              View all international publications <span aria-hidden="true">→</span>
             </a>
           </div>
 
-          <div class="publication-list">
-            <article>
-              <div class="publication-meta">
-                <span>Measurement</span>
-                <time datetime="2026">2026</time>
-              </div>
-              <h3>
-                Dual-sensor convergence probe with stacked MSSA fusion for
-                lift-off-independent corrosion quantification
-              </h3>
-              <p>Minhhuy Le, Le Quang Trung, Naoya Kasai, and collaborators</p>
-              <a href="https://doi.org/10.1016/j.measurement.2026.122892" aria-label="Open publication DOI">
-                DOI <span aria-hidden="true">↗</span>
-              </a>
-            </article>
-
-            <article>
-              <div class="publication-meta">
-                <span>Digital Signal Processing</span>
-                <time datetime="2026">2026</time>
-              </div>
-              <h3>
-                Predictive uncertainty estimation for UWB radar-based indoor
-                occupancy counting under signal degradation
-              </h3>
-              <p>Tuan Kiet Tran Mach, The Tuan Trinh, Pham Vu Hien, and collaborators</p>
-              <a href="https://doi.org/10.1016/j.dsp.2026.106444" aria-label="Open publication DOI">
-                DOI <span aria-hidden="true">↗</span>
-              </a>
-            </article>
-
-            <article>
-              <div class="publication-meta">
-                <span>IEEE TAES</span>
-                <time datetime="2026">2026</time>
-              </div>
-              <h3>
-                Complex-valued (2+1)D convolutional neural networks for real-time
-                hand gesture recognition on edge devices with FMCW radar
-              </h3>
-              <p>The Tuan Trinh, Phan Xuan Tan, Khai Nguyen Van, and collaborators</p>
-              <a href="https://doi.org/10.1109/TAES.2026.3709269" aria-label="Open publication DOI">
-                DOI <span aria-hidden="true">↗</span>
-              </a>
-            </article>
+          <div
+            class="publication-list"
+            data-publications-recent
+            data-limit="4"
+            aria-live="polite"
+            aria-busy="true"
+          >
+            <p class="publication-loading">Loading recent publications…</p>
           </div>
         </div>
       </section>
