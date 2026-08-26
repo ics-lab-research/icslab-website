@@ -19,9 +19,15 @@ Open <http://localhost:8000>.
 3. Under **Build and deployment**, select **Deploy from a branch**.
 4. Select the `main` branch and `/ (root)`, then save.
 
-`CNAME` keeps the existing `icslab.phenikaa-uni.edu.vn` domain. Set its DNS
-`CNAME` record to `ics-lab-research.github.io` before switching away from
-Google Sites.
+The temporary site URL is:
+
+```text
+https://ics-lab-research.github.io/icslab-website/
+```
+
+No `CNAME` file is included, so `icslab.phenikaa-uni.edu.vn` continues serving
+the old Google Sites website. When the new site is approved, add the custom
+domain in GitHub **Settings → Pages**, then update DNS.
 
 ## Content updates
 

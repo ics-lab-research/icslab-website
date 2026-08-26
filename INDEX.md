@@ -13,4 +13,4 @@ ICSLab's public GitHub Pages website.
 - `styles.css` — responsive visual system
 - `script.js` — mobile menu and header behavior
 - `assets/` — optimized local images
-- `CNAME` — custom GitHub Pages domain
+- GitHub Pages URL — `https://ics-lab-research.github.io/icslab-website/`
