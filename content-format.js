@@ -11,10 +11,14 @@
   const rankingText = (publication) => {
     const ranking = publication.ranking || {};
     const values = [];
-    if (ranking.quartile) values.push(ranking.quartile);
+    if (ranking.quartile) values.push(`${ranking.quartile}${ranking.quartileYear ? ` ${ranking.quartileYear}` : ""}`);
     if (ranking.impactFactor !== null && ranking.impactFactor !== undefined && ranking.impactFactor !== "") {
       const year = ranking.impactFactorYear || "";
       values.push(`IF${year}: ${ranking.impactFactor}`);
+    }
+    if ((ranking.quartile || ranking.impactFactor !== null && ranking.impactFactor !== undefined && ranking.impactFactor !== "")
+      && ranking.system && !ranking.system.startsWith("Legacy source")) {
+      values.push(ranking.system);
     }
     (publication.indexing || []).forEach((item) => {
       if (item && !values.includes(item)) values.push(item);
@@ -46,8 +50,11 @@
     return `${sections.join(", ")}${ranking ? `, ${ranking}` : "."}`;
   };
 
+  const citationOverrideText = (publication) =>
+    publication.useStructuredCitation ? "" : text(publication.citationOverride || publication.citation);
+
   const publicationCitationText = (publication) =>
-    text(publication.citationOverride || publication.citation) || structuredCitationText(publication);
+    citationOverrideText(publication) || structuredCitationText(publication);
 
   const appendLegacyCitation = (container, publication, membersById) => {
     const citation = publicationCitationText(publication);
@@ -113,7 +120,7 @@
   };
 
   const appendPublicationCitation = (container, publication, membersById = new Map()) => {
-    const hasOverride = text(publication.citationOverride || publication.citation);
+    const hasOverride = citationOverrideText(publication);
     if (hasOverride) appendLegacyCitation(container, publication, membersById);
     else appendStructuredCitation(container, publication, membersById);
   };

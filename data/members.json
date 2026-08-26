@@ -61,7 +61,8 @@
       "aliases": [
         "Vuong Quang Pham",
         "Quang Vuong Pham",
-        "Pham Quang Vuong"
+        "Pham Quang Vuong",
+        "Vuong Pham Quang"
       ],
       "category": "phd",
       "status": "active",
@@ -558,7 +559,8 @@
       "aliases": [
         "Hoai Dung Tran Thi",
         "Tran Thi Hoai Dung",
-        "Thi Hoai Dung Tran"
+        "Thi Hoai Dung Tran",
+        "H Tran Thi"
       ],
       "category": "alumni",
       "status": "alumni",
@@ -583,6 +585,21 @@
         "Huu Trung Nguyen",
         "Trung Nguyen Huu",
         "Nguyen Huu Trung"
+      ],
+      "category": "alumni",
+      "status": "alumni",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/alumni"
+    },
+    {
+      "id": "dang-khoa-nguyen",
+      "displayName": "Dang Khoa Nguyen",
+      "aliases": [
+        "Dang Khoa Nguyen",
+        "Khoa Dang Nguyen",
+        "Khoa Nguyen Dang",
+        "Khoa Nguyen-Dang",
+        "Dang KhoaNguyen"
       ],
       "category": "alumni",
       "status": "alumni",

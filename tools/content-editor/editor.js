@@ -30,6 +30,15 @@ const slugify = (value) =>
 const numberOrNull = (value) => (value === "" ? null : Number(value));
 const textOrNull = (value) => value.trim() || null;
 const memberMap = () => new Map(state.members.content.members.map((member) => [member.id, member]));
+const normalizedName = (value) => value.normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]/g, "");
+
+const matchingMemberId = (name) => {
+  const target = normalizedName(name);
+  const matches = state.members.content.members.filter((member) =>
+    [member.displayName, ...(member.aliases || [])].some((alias) => normalizedName(alias) === target),
+  );
+  return matches.length === 1 ? matches[0].id : null;
+};
 
 const loadContent = async () => {
   const response = await fetch("/api/content", { cache: "no-store" });
@@ -202,6 +211,7 @@ const publicationFromForm = () => {
     },
     indexing: values.get("indexing").split(",").map((item) => item.trim()).filter(Boolean),
     highlightedAuthors: selected?.highlightedAuthors || [],
+    useStructuredCitation: publicationForm.elements.useStructuredCitation.checked,
     citationOverride: textOrNull(values.get("citationOverride")),
   };
 };
@@ -245,6 +255,7 @@ const fillPublicationForm = (publication) => {
   Object.entries(fields).forEach(([name, value]) => {
     publicationForm.elements[name].value = value;
   });
+  publicationForm.elements.useStructuredCitation.checked = Boolean(publication.useStructuredCitation);
   publicationForm.elements.id.readOnly = Boolean(state.selectedPublication);
   renderAuthors(publication.authors || []);
   $("[data-delete-publication]").hidden = !state.selectedPublication;
@@ -263,10 +274,63 @@ const newPublication = () => {
   publicationForm.reset();
   fillPublicationForm({
     id: "", type: "journal", status: "draft", year: new Date().getFullYear(), publicationDate: "",
-    title: "", authors: [], venue: {}, identifiers: {}, ranking: {}, indexing: [], citationOverride: null,
+    title: "", authors: [], venue: {}, identifiers: {}, ranking: {}, indexing: [],
+    useStructuredCitation: true, citationOverride: null,
   });
   publicationForm.elements.id.readOnly = false;
   renderPublicationList();
+};
+
+const setDoiStatus = (message, type = "") => {
+  const node = $("[data-doi-status]");
+  node.textContent = message;
+  node.className = type ? `is-${type}` : "";
+};
+
+const applyDoiMetadata = (metadata) => {
+  const fields = {
+    doi: metadata.doi,
+    url: metadata.url,
+    title: metadata.title,
+    venueName: metadata.venue?.name,
+    volume: metadata.venue?.volume,
+    issue: metadata.venue?.issue,
+    part: metadata.venue?.part,
+    pages: metadata.venue?.pages,
+    articleNumber: metadata.venue?.articleNumber,
+    publisher: metadata.venue?.publisher,
+    year: metadata.year,
+    publicationDate: metadata.publicationDate,
+  };
+  Object.entries(fields).forEach(([name, value]) => {
+    if (value !== null && value !== undefined && value !== "") publicationForm.elements[name].value = value;
+  });
+  if (metadata.type) publicationForm.elements.type.value = metadata.type;
+  if (metadata.authors?.length) {
+    renderAuthors(metadata.authors.map((author) => ({ ...author, memberId: matchingMemberId(author.name) })));
+  }
+  if (!state.selectedPublication && !publicationForm.elements.id.value) {
+    publicationForm.elements.id.value = slugify(metadata.title || metadata.doi);
+  }
+  updatePublicationPreview();
+};
+
+const fetchDoiMetadata = async () => {
+  const button = $("[data-fetch-doi]");
+  const doi = publicationForm.elements.doi.value.trim();
+  button.disabled = true;
+  setDoiStatus("Retrieving DOI metadata…");
+  try {
+    const response = await fetch(`/api/doi?doi=${encodeURIComponent(doi)}`, { cache: "no-store" });
+    const result = await response.json();
+    if (!response.ok) throw new Error(result.error || `DOI lookup failed: ${response.status}`);
+    applyDoiMetadata(result.metadata);
+    setDoiStatus("Metadata imported. Review authors and complete Q, impact factor, source year, or Scopus manually.", "success");
+  } catch (error) {
+    setDoiStatus(`${error.message}. Continue with manual entry below.`, "error");
+  } finally {
+    button.disabled = false;
+  }
 };
 
 publicationForm.addEventListener("input", () => {
@@ -307,6 +371,7 @@ $("[data-add-author]").addEventListener("click", () => {
   $("[data-author-list]").append(authorRow());
   updatePublicationPreview();
 });
+$("[data-fetch-doi]").addEventListener("click", fetchDoiMetadata);
 $("[data-new-publication]").addEventListener("click", newPublication);
 $("[data-delete-publication]").addEventListener("click", async () => {
   if (!confirm("Delete this publication from the dataset?")) return;

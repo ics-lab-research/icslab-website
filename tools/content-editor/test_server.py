@@ -46,6 +46,33 @@ class ContentValidationTest(unittest.TestCase):
             server.atomic_write(path, self.members)
             self.assertEqual(json.loads(path.read_text()), self.members)
 
+    def test_csl_metadata_maps_to_publication_fields(self):
+        metadata = server.csl_to_publication_metadata(
+            {
+                "DOI": "10.1000/example",
+                "type": "journal-article",
+                "title": "Example paper",
+                "container-title": "Example Journal",
+                "volume": "12",
+                "issue": "3",
+                "page": "45-50",
+                "article-number": "45-50",
+                "publisher": "Example Publisher",
+                "issued": {"date-parts": [[2026, 8, 26]]},
+                "author": [{"given": "Minhhuy", "family": "Le"}],
+            },
+            "10.1000/example",
+        )
+        self.assertEqual(metadata["type"], "journal")
+        self.assertEqual(metadata["publicationDate"], "2026-08-26")
+        self.assertEqual(metadata["authors"][0]["name"], "Minhhuy Le")
+        self.assertEqual(metadata["venue"]["name"], "Example Journal")
+        self.assertIsNone(metadata["venue"]["pages"])
+        self.assertEqual(metadata["venue"]["articleNumber"], "45-50")
+
+    def test_normalize_doi_accepts_resolver_url(self):
+        self.assertEqual(server.normalize_doi("https://doi.org/10.1000/example"), "10.1000/example")
+
 
 if __name__ == "__main__":
     unittest.main()

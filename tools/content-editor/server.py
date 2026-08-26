@@ -8,7 +8,9 @@ import tempfile
 from http import HTTPStatus
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.error import HTTPError, URLError
+from urllib.parse import parse_qs, urlencode, urlparse
+from urllib.request import Request, urlopen
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -22,6 +24,8 @@ MAX_BODY_SIZE = 5 * 1024 * 1024
 ID_PATTERN = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 DATE_PATTERN = re.compile(r"^\d{4}(?:-\d{2}-\d{2})?$")
 DOI_PATTERN = re.compile(r"^10\.\d{4,9}/\S+$", re.IGNORECASE)
+DOI_METADATA_URL = "https://citation.doi.org/metadata"
+DOI_RESPONSE_LIMIT = 2 * 1024 * 1024
 PUBLICATION_TYPES = {"journal", "conference", "book-chapter", "legacy"}
 PUBLICATION_STATUSES = {"draft", "accepted", "online-first", "published"}
 MEMBER_CATEGORIES = {"professor", "phd", "research-assistant", "student", "alumni"}
@@ -30,6 +34,10 @@ NEWS_STATUSES = {"draft", "published"}
 
 
 class ValidationError(ValueError):
+    pass
+
+
+class MetadataError(RuntimeError):
     pass
 
 
@@ -49,6 +57,118 @@ def require(condition, message):
 
 def require_id(value, label):
     require(isinstance(value, str) and ID_PATTERN.fullmatch(value), f"{label} must be a kebab-case ID")
+
+
+def normalize_doi(value):
+    doi = str(value or "").strip()
+    doi = re.sub(r"^doi:\s*", "", doi, flags=re.IGNORECASE)
+    doi = re.sub(r"^https?://(?:dx\.)?doi\.org/", "", doi, flags=re.IGNORECASE)
+    require(DOI_PATTERN.fullmatch(doi), "Enter a valid DOI such as 10.1000/example")
+    return doi
+
+
+def first_text(value):
+    if isinstance(value, list):
+        value = value[0] if value else ""
+    return str(value or "").strip() or None
+
+
+def csl_author_name(author):
+    literal = first_text(author.get("literal"))
+    if literal:
+        return literal
+    name = " ".join(
+        filter(
+            None,
+            (
+                first_text(author.get("given")),
+                first_text(author.get("dropping-particle")),
+                first_text(author.get("non-dropping-particle")),
+                first_text(author.get("family")),
+            ),
+        )
+    )
+    suffix = first_text(author.get("suffix"))
+    return f"{name}, {suffix}" if name and suffix else name
+
+
+def csl_date(metadata):
+    date_parts = (metadata.get("issued") or {}).get("date-parts") or []
+    parts = date_parts[0] if date_parts else []
+    if not parts:
+        return None, None
+    year = int(parts[0])
+    date = f"{year:04d}-{int(parts[1]):02d}-{int(parts[2]):02d}" if len(parts) >= 3 else str(year)
+    return year, date
+
+
+def publication_type(csl_type):
+    return {
+        "article-journal": "journal",
+        "journal-article": "journal",
+        "paper-conference": "conference",
+        "proceedings-article": "conference",
+        "chapter": "book-chapter",
+        "book-chapter": "book-chapter",
+    }.get(csl_type)
+
+
+def csl_to_publication_metadata(metadata, requested_doi):
+    year, publication_date = csl_date(metadata)
+    doi = first_text(metadata.get("DOI")) or requested_doi
+    pages = first_text(metadata.get("page"))
+    article_number = first_text(metadata.get("article-number"))
+    if pages == article_number:
+        pages = None
+    authors = [
+        {"name": name, "memberId": None, "corresponding": False}
+        for author in metadata.get("author") or []
+        if (name := csl_author_name(author))
+    ]
+    return {
+        "doi": doi,
+        "url": f"https://doi.org/{doi}",
+        "type": publication_type(metadata.get("type")),
+        "year": year,
+        "publicationDate": publication_date,
+        "title": first_text(metadata.get("title")),
+        "authors": authors,
+        "venue": {
+            "name": first_text(metadata.get("container-title")),
+            "volume": first_text(metadata.get("volume")),
+            "issue": first_text(metadata.get("issue")),
+            "part": first_text(metadata.get("part")),
+            "pages": pages,
+            "articleNumber": article_number,
+            "publisher": first_text(metadata.get("publisher")),
+        },
+    }
+
+
+def fetch_doi_metadata(value):
+    doi = normalize_doi(value)
+    request = Request(
+        f"{DOI_METADATA_URL}?{urlencode({'doi': doi})}",
+        headers={
+            "Accept": "application/vnd.citationstyles.csl+json",
+            "User-Agent": "ICSLabContentEditor/1.0",
+        },
+    )
+    try:
+        with urlopen(request, timeout=10) as response:
+            body = response.read(DOI_RESPONSE_LIMIT + 1)
+        if len(body) > DOI_RESPONSE_LIMIT:
+            raise MetadataError("DOI metadata response was too large")
+        metadata = json.loads(body)
+        if not isinstance(metadata, dict):
+            raise MetadataError("DOI service returned invalid metadata")
+        return csl_to_publication_metadata(metadata, doi)
+    except HTTPError as error:
+        if error.code == HTTPStatus.NOT_FOUND:
+            raise MetadataError("DOI metadata was not found") from error
+        raise MetadataError(f"DOI service returned HTTP {error.code}") from error
+    except (URLError, TimeoutError, json.JSONDecodeError, AttributeError, TypeError, ValueError) as error:
+        raise MetadataError("DOI service is unavailable or returned invalid metadata") from error
 
 
 def validate_members(content):
@@ -84,6 +204,8 @@ def validate_publications(content, member_ids):
         seen_ids.add(publication["id"])
         require(publication.get("type") in PUBLICATION_TYPES, f"{label}.type is invalid")
         require(publication.get("status") in PUBLICATION_STATUSES, f"{label}.status is invalid")
+        if "useStructuredCitation" in publication:
+            require(isinstance(publication["useStructuredCitation"], bool), f"{label}.useStructuredCitation must be boolean")
         require(isinstance(publication.get("year"), int) and 1900 <= publication["year"] <= 2100, f"{label}.year is invalid")
         authors = publication.get("authors", [])
         require(isinstance(authors, list), f"{label}.authors must be an array")
@@ -233,6 +355,14 @@ class EditorHandler(BaseHTTPRequestHandler):
                 for kind, path in DATA_FILES.items()
             }
             self._json(HTTPStatus.OK, payload)
+        elif route == "/api/doi":
+            doi = parse_qs(urlparse(self.path).query).get("doi", [""])[0]
+            try:
+                self._json(HTTPStatus.OK, {"metadata": fetch_doi_metadata(doi)})
+            except ValidationError as error:
+                self._json(HTTPStatus.BAD_REQUEST, {"error": str(error)})
+            except MetadataError as error:
+                self._json(HTTPStatus.BAD_GATEWAY, {"error": str(error)})
         elif route == "/api/health":
             self._json(HTTPStatus.OK, {"status": "ok"})
         else:

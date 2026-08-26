@@ -113,8 +113,14 @@
 
           <fieldset>
             <legend>Identifiers and ranking</legend>
+            <div class="doi-import">
+              <label>DOI <input name="doi" placeholder="10.xxxx/… or https://doi.org/…" /></label>
+              <button type="button" data-fetch-doi>Get metadata</button>
+              <p role="status" aria-live="polite" data-doi-status>
+                Imports authors, title, venue, volume, issue, pages, publisher, and date. Rankings remain manual.
+              </p>
+            </div>
             <div class="field-grid three-columns">
-              <label class="wide-field">DOI <input name="doi" placeholder="10.xxxx/…" /></label>
               <label class="wide-field">Publication URL <input name="url" type="url" /></label>
               <label>Quartile <input name="quartile" placeholder="Q1" /></label>
               <label>Quartile year <input name="quartileYear" type="number" min="1900" max="2100" /></label>
@@ -128,7 +134,11 @@
           <label>
             Citation override
             <textarea name="citationOverride" rows="5"></textarea>
-            <small>Leave empty for generated citation. Existing legacy text should remain until professor review.</small>
+            <small>Legacy text stays for audit. Uncheck generated citation only when this text must control display.</small>
+          </label>
+          <label class="check-field">
+            <input name="useStructuredCitation" type="checkbox" />
+            Use generated citation from structured fields
           </label>
 
           <section class="preview-card" aria-labelledby="publication-preview-title">

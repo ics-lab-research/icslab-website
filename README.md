@@ -24,6 +24,12 @@ python3 tools/content-editor/server.py
 Open <http://127.0.0.1:8001/editor/>. Review `git diff` before pushing changes.
 Never expose the editor port to a network or deploy it as a public service.
 
+For publications, paste a DOI and select **Get metadata**. The editor imports
+bibliographic fields when DOI metadata is available. If retrieval fails, all
+fields remain available for manual entry. Add Q, impact factor, ranking year,
+ranking source, and Scopus manually because DOI metadata does not reliably
+provide journal rankings.
+
 ## Publish with GitHub Pages
 
 1. Push this repository to GitHub.
