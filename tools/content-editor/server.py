@@ -5,11 +5,12 @@ import json
 import os
 import re
 import tempfile
+from datetime import date
 from http import HTTPStatus
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.error import HTTPError, URLError
-from urllib.parse import parse_qs, urlencode, urlparse
+from urllib.parse import parse_qs, quote, urlparse
 from urllib.request import Request, urlopen
 
 
@@ -23,8 +24,9 @@ DATA_FILES = {
 MAX_BODY_SIZE = 5 * 1024 * 1024
 ID_PATTERN = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 DATE_PATTERN = re.compile(r"^\d{4}(?:-\d{2}-\d{2})?$")
+PUBLICATION_DATE_PATTERN = re.compile(r"^\d{4}(?:-\d{2}(?:-\d{2})?)?$")
 DOI_PATTERN = re.compile(r"^10\.\d{4,9}/\S+$", re.IGNORECASE)
-DOI_METADATA_URL = "https://citation.doi.org/metadata"
+DOI_METADATA_URL = "https://doi.org/"
 DOI_RESPONSE_LIMIT = 2 * 1024 * 1024
 PUBLICATION_TYPES = {"journal", "conference", "book-chapter", "legacy"}
 PUBLICATION_STATUSES = {"draft", "accepted", "online-first", "published"}
@@ -57,6 +59,29 @@ def require(condition, message):
 
 def require_id(value, label):
     require(isinstance(value, str) and ID_PATTERN.fullmatch(value), f"{label} must be a kebab-case ID")
+
+def require_publication_date(value, year, label):
+    require(isinstance(value, str) and PUBLICATION_DATE_PATTERN.fullmatch(value), f"{label} must be YYYY, YYYY-MM, or YYYY-MM-DD")
+    require(int(value[:4]) == year, f"{label} must match year")
+    if len(value) > 4:
+        try:
+            date.fromisoformat(value if len(value) == 10 else f"{value}-01")
+        except ValueError as error:
+            raise ValidationError(f"{label} must be a valid date") from error
+
+
+def require_exact_date(value, label):
+    require(isinstance(value, str) and len(value) == 10, f"{label} must be YYYY-MM-DD")
+    try:
+        date.fromisoformat(value)
+    except ValueError as error:
+        raise ValidationError(f"{label} must be a valid date") from error
+
+
+def publication_sort_date(publication):
+    publication_parts = publication["publicationDate"].split("-")
+    added_parts = publication["addedDate"].split("-")
+    return "-".join(publication_parts + added_parts[len(publication_parts):])
 
 
 def normalize_doi(value):
@@ -93,13 +118,22 @@ def csl_author_name(author):
 
 
 def csl_date(metadata):
-    date_parts = (metadata.get("issued") or {}).get("date-parts") or []
-    parts = date_parts[0] if date_parts else []
+    candidates = []
+    for field in ("published-online", "published", "issued", "published-print"):
+        date_parts = (metadata.get(field) or {}).get("date-parts") or []
+        parts = date_parts[0] if date_parts else []
+        if parts:
+            candidates.append(parts)
+    parts = next((value for value in candidates if len(value) >= 3), candidates[0] if candidates else [])
     if not parts:
         return None, None
     year = int(parts[0])
-    date = f"{year:04d}-{int(parts[1]):02d}-{int(parts[2]):02d}" if len(parts) >= 3 else str(year)
-    return year, date
+    publication_date = str(year)
+    if len(parts) >= 2:
+        publication_date += f"-{int(parts[1]):02d}"
+    if len(parts) >= 3:
+        publication_date += f"-{int(parts[2]):02d}"
+    return year, publication_date
 
 
 def publication_type(csl_type):
@@ -148,7 +182,7 @@ def csl_to_publication_metadata(metadata, requested_doi):
 def fetch_doi_metadata(value):
     doi = normalize_doi(value)
     request = Request(
-        f"{DOI_METADATA_URL}?{urlencode({'doi': doi})}",
+        f"{DOI_METADATA_URL}{quote(doi, safe='/')}",
         headers={
             "Accept": "application/vnd.citationstyles.csl+json",
             "User-Agent": "ICSLabContentEditor/1.0",
@@ -207,6 +241,8 @@ def validate_publications(content, member_ids):
         if "useStructuredCitation" in publication:
             require(isinstance(publication["useStructuredCitation"], bool), f"{label}.useStructuredCitation must be boolean")
         require(isinstance(publication.get("year"), int) and 1900 <= publication["year"] <= 2100, f"{label}.year is invalid")
+        require_publication_date(publication.get("publicationDate"), publication["year"], f"{label}.publicationDate")
+        require_exact_date(publication.get("addedDate"), f"{label}.addedDate")
         authors = publication.get("authors", [])
         require(isinstance(authors, list), f"{label}.authors must be an array")
         if publication.get("type") != "legacy":
@@ -391,8 +427,10 @@ class EditorHandler(BaseHTTPRequestHandler):
                 return
             content = payload.get("content")
             validate_all(kind, content)
+            if kind == "publications":
+                content["publications"].sort(key=publication_sort_date, reverse=True)
             atomic_write(path, content)
-            self._json(HTTPStatus.OK, {"revision": revision(path)})
+            self._json(HTTPStatus.OK, {"revision": revision(path), "content": content})
         except (json.JSONDecodeError, ValidationError, KeyError, TypeError) as error:
             self._json(HTTPStatus.BAD_REQUEST, {"error": str(error)})
 

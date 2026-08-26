@@ -84,7 +84,8 @@
               </select>
             </label>
             <label>Year <input name="year" type="number" min="1900" max="2100" required /></label>
-            <label>Publication date <input name="publicationDate" placeholder="2026 or 2026-08-26" /></label>
+            <label>Publication date <input name="publicationDate" placeholder="YYYY, YYYY-MM, or YYYY-MM-DD" pattern="[0-9]{4}(-[0-9]{2}(-[0-9]{2})?)?" /></label>
+            <label>Added date <input name="addedDate" type="date" readonly /></label>
             <label>Legacy type <input name="legacyType" placeholder="journal" /></label>
           </div>
 

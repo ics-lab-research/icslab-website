@@ -29,6 +29,12 @@ const slugify = (value) =>
 
 const numberOrNull = (value) => (value === "" ? null : Number(value));
 const textOrNull = (value) => value.trim() || null;
+const localToday = () => {
+  const today = new Date();
+  const month = String(today.getMonth() + 1).padStart(2, "0");
+  const day = String(today.getDate()).padStart(2, "0");
+  return `${today.getFullYear()}-${month}-${day}`;
+};
 const memberMap = () => new Map(state.members.content.members.map((member) => [member.id, member]));
 const normalizedName = (value) => value.normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]/g, "");
 
@@ -63,7 +69,7 @@ const persist = async (kind, nextContent) => {
   });
   const result = await response.json();
   if (!response.ok) throw new Error(result.error || `Save failed: ${response.status}`);
-  state[kind].content = nextContent;
+  state[kind].content = result.content || nextContent;
   state[kind].revision = result.revision;
   return previousContent;
 };
@@ -187,6 +193,7 @@ const publicationFromForm = () => {
     status: values.get("status"),
     year: Number(values.get("year")),
     publicationDate: values.get("publicationDate").trim() || String(values.get("year")),
+    addedDate: selected?.addedDate || values.get("addedDate") || localToday(),
     title: textOrNull(values.get("title")),
     authors: collectAuthors(),
     venue: {
@@ -234,6 +241,7 @@ const fillPublicationForm = (publication) => {
     status: publication.status,
     year: publication.year,
     publicationDate: publication.publicationDate || "",
+    addedDate: publication.addedDate || localToday(),
     title: publication.title || "",
     venueName: publication.venue?.name || "",
     volume: publication.venue?.volume || "",
@@ -273,7 +281,7 @@ const newPublication = () => {
   state.selectedPublication = null;
   publicationForm.reset();
   fillPublicationForm({
-    id: "", type: "journal", status: "draft", year: new Date().getFullYear(), publicationDate: "",
+    id: "", type: "journal", status: "draft", year: new Date().getFullYear(), publicationDate: "", addedDate: localToday(),
     title: "", authors: [], venue: {}, identifiers: {}, ranking: {}, indexing: [],
     useStructuredCitation: true, citationOverride: null,
   });
@@ -347,7 +355,6 @@ publicationForm.addEventListener("submit", async (event) => {
     const index = content.publications.findIndex(({ id }) => id === state.selectedPublication);
     if (index >= 0) content.publications[index] = publication;
     else content.publications.unshift(publication);
-    content.publications.sort((left, right) => right.year - left.year);
     setStatus("Saving publication…");
     await persist("publications", content);
     state.selectedPublication = publication.id;

@@ -1,15 +1,6 @@
 const recentPublications = document.querySelector("[data-publications-recent]");
 const publicationArchive = document.querySelector("[data-publications-all]");
 
-const publicationTypeLabel = (publication) => {
-  const type = publication.type === "legacy" ? publication.legacyType : publication.type;
-  return {
-    journal: "Journal article",
-    conference: "Conference paper",
-    "book-chapter": "Book chapter",
-  }[type] || "International publication";
-};
-
 const createPublicationLink = (publication) => {
   const url = window.ICSLabContent.publicationUrl(publication);
   if (!url) return null;
@@ -29,6 +20,25 @@ const createCitation = (publication, membersById) => {
   return citation;
 };
 
+const createAuthors = (publication, membersById) => {
+  const authors = document.createElement("p");
+  (publication.authors || []).forEach((author, index) => {
+    if (index) authors.append(", ");
+    const member = author.memberId ? membersById.get(author.memberId) : null;
+    if (author.memberId && member?.highlightInPublications !== false) {
+      const name = document.createElement("strong");
+      name.className = "lab-author";
+      name.dataset.memberId = author.memberId;
+      name.textContent = author.name;
+      authors.append(name);
+    } else {
+      authors.append(author.name);
+    }
+    if (author.corresponding) authors.append("*");
+  });
+  return authors;
+};
+
 const renderRecentPublications = (publications, membersById) => {
   if (!recentPublications) return;
 
@@ -36,20 +46,10 @@ const renderRecentPublications = (publications, membersById) => {
   recentPublications.replaceChildren(
     ...publications.slice(0, limit).map((publication) => {
       const article = document.createElement("article");
-      const meta = document.createElement("div");
-      const type = document.createElement("span");
-      const year = document.createElement("time");
       const title = document.createElement("h3");
 
-      meta.className = "publication-meta";
-      type.textContent = publicationTypeLabel(publication);
-      year.dateTime = String(publication.year);
-      year.textContent = String(publication.year);
-      meta.append(type, year);
-
       title.textContent = publication.title || "International publication";
-      article.append(meta, title, createCitation(publication, membersById));
-
+      article.append(title, createAuthors(publication, membersById));
       const link = createPublicationLink(publication);
       if (link) article.append(link);
       return article;

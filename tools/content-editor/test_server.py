@@ -28,6 +28,8 @@ class ContentValidationTest(unittest.TestCase):
             "id": "example-paper",
             "type": "journal",
             "year": 2026,
+            "publicationDate": "2026",
+            "addedDate": "2026-08-26",
             "title": "Example",
             "authors": [{"name": "Minhhuy Le", "memberId": "minhhuy-le", "corresponding": True}],
             "venue": {"name": "Measurement"},
@@ -70,8 +72,43 @@ class ContentValidationTest(unittest.TestCase):
         self.assertIsNone(metadata["venue"]["pages"])
         self.assertEqual(metadata["venue"]["articleNumber"], "45-50")
 
+    def test_csl_metadata_prefers_exact_online_date(self):
+        year, publication_date = server.csl_date(
+            {
+                "published-online": {"date-parts": [[2026, 8, 20]]},
+                "issued": {"date-parts": [[2026]]},
+            }
+        )
+        self.assertEqual((year, publication_date), (2026, "2026-08-20"))
+
+    def test_csl_metadata_preserves_month_precision(self):
+        year, publication_date = server.csl_date({"issued": {"date-parts": [[2026, 8]]}})
+        self.assertEqual((year, publication_date), (2026, "2026-08"))
+
     def test_normalize_doi_accepts_resolver_url(self):
         self.assertEqual(server.normalize_doi("https://doi.org/10.1000/example"), "10.1000/example")
+
+    def test_publication_date_rejects_invalid_calendar_date(self):
+        with self.assertRaisesRegex(server.ValidationError, "valid date"):
+            server.require_publication_date("2026-02-30", 2026, "publicationDate")
+
+    def test_sort_date_fills_only_missing_components(self):
+        self.assertEqual(
+            server.publication_sort_date({"publicationDate": "2026-08", "addedDate": "2026-09-27"}),
+            "2026-08-27",
+        )
+        self.assertEqual(
+            server.publication_sort_date({"publicationDate": "2026", "addedDate": "2025-07-15"}),
+            "2026-07-15",
+        )
+
+    def test_publication_sort_keeps_equal_dates_stable(self):
+        publications = [
+            {"id": "first", "publicationDate": "2026", "addedDate": "2026-08-26"},
+            {"id": "second", "publicationDate": "2026", "addedDate": "2026-08-26"},
+        ]
+        publications.sort(key=server.publication_sort_date, reverse=True)
+        self.assertEqual([publication["id"] for publication in publications], ["first", "second"])
 
 
 if __name__ == "__main__":

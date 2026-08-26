@@ -11,6 +11,9 @@ JSON files.
 - `editor.js` — forms, previews, and save behavior
 - `test_server.py` — validation and atomic-write checks
 
+DOI import preserves available year/month/day precision. Publication saves fill
+missing date components from immutable `addedDate`, then sort newest-first.
+
 ## Run
 
 ```bash

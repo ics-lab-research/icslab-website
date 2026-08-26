@@ -25,7 +25,9 @@ Open <http://127.0.0.1:8001/editor/>. Review `git diff` before pushing changes.
 Never expose the editor port to a network or deploy it as a public service.
 
 For publications, paste a DOI and select **Get metadata**. The editor imports
-bibliographic fields when DOI metadata is available. If retrieval fails, all
+bibliographic fields and all available publication-date precision. Sorting uses
+the DOI year/month/day, filling missing components from the immutable added date.
+If retrieval fails, all
 fields remain available for manual entry. Add Q, impact factor, ranking year,
 ranking source, and Scopus manually because DOI metadata does not reliably
 provide journal rankings.

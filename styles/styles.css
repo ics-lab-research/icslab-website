@@ -687,24 +687,13 @@ a {
 
 .publication-list article {
   position: relative;
-  padding: 34px 48px 34px 0;
+  padding: 34px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.14);
-}
-
-.publication-meta {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  color: #8fb3ff;
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
 }
 
 .publication-list h3 {
   max-width: 720px;
-  margin: 14px 0 10px;
+  margin: 0 0 10px;
   font-size: 1.28rem;
   font-weight: 650;
   line-height: 1.45;
@@ -722,9 +711,8 @@ a {
 }
 
 .publication-list article > a {
-  position: absolute;
-  right: 0;
-  bottom: 34px;
+  display: inline-block;
+  margin-top: 14px;
   color: var(--orange);
   font-size: 0.74rem;
   font-weight: 850;
@@ -1349,17 +1337,10 @@ a {
   border-radius: 12px;
 }
 
-.person-monogram {
+.person-photo {
   width: 84px;
-  height: 84px;
-  display: grid;
-  place-items: center;
-  color: var(--white);
-  background: linear-gradient(145deg, var(--navy), var(--blue));
+  height: auto;
   border-radius: 10px;
-  font-size: 1.25rem;
-  font-weight: 850;
-  letter-spacing: -0.04em;
 }
 
 .people-list p {
@@ -1839,11 +1820,6 @@ a {
     grid-column: auto;
   }
 
-  .publication-list article {
-    padding-right: 0;
-    padding-bottom: 66px;
-  }
-
   .page-hero {
     padding: 140px 0 72px;
   }
@@ -1909,21 +1885,13 @@ a {
     padding: 24px;
   }
 
-  .publication-list article > a {
-    right: auto;
-    bottom: 30px;
-    left: 0;
-  }
-
   .people-list article {
     grid-template-columns: 62px 1fr;
     padding: 20px;
   }
 
-  .person-monogram {
+  .person-photo {
     width: 62px;
-    height: 62px;
-    font-size: 1rem;
   }
 
   .join-section {
