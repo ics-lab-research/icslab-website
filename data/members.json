@@ -1,0 +1,593 @@
+{
+  "version": 1,
+  "source": "https://icslab.phenikaa-uni.edu.vn/members",
+  "retrieved": "2026-08-26",
+  "members": [
+    {
+      "id": "minhhuy-le",
+      "displayName": "Minhhuy Le",
+      "aliases": [
+        "Minhhuy Le",
+        "Minh-Huy Le",
+        "Minhuy Le"
+      ],
+      "category": "professor",
+      "status": "active",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/professors"
+    },
+    {
+      "id": "van-su-luong",
+      "displayName": "Van Su Luong",
+      "aliases": [
+        "Van Su Luong",
+        "Luong Van Su",
+        "VS Luong",
+        "V. S. Luong"
+      ],
+      "category": "professor",
+      "status": "active",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/professors"
+    },
+    {
+      "id": "tran-huy-hung",
+      "displayName": "Tran Huy Hung",
+      "aliases": [
+        "Tran Huy Hung",
+        "Hung Tran-Huy",
+        "Tran-Huy Hung"
+      ],
+      "category": "professor",
+      "status": "active",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/professors"
+    },
+    {
+      "id": "dang-khanh-le",
+      "displayName": "Dang-Khanh Le",
+      "aliases": [
+        "Dang-Khanh Le",
+        "Dang Khanh Le"
+      ],
+      "category": "professor",
+      "status": "active",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/professors"
+    },
+    {
+      "id": "vuong-quang-pham",
+      "displayName": "Vuong Quang Pham",
+      "aliases": [
+        "Vuong Quang Pham",
+        "Quang Vuong Pham",
+        "Pham Quang Vuong"
+      ],
+      "category": "phd",
+      "status": "active",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/phd"
+    },
+    {
+      "id": "xuanque-nguyen",
+      "displayName": "XuanQue Nguyen",
+      "aliases": [
+        "XuanQue Nguyen",
+        "Xuanque Nguyen",
+        "Xuan Que Nguyen"
+      ],
+      "category": "phd",
+      "status": "active",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/phd"
+    },
+    {
+      "id": "the-tuan-trinh",
+      "displayName": "The Tuan Trinh",
+      "aliases": [
+        "The Tuan Trinh",
+        "Trinh The Tuan"
+      ],
+      "category": "research-assistant",
+      "status": "active",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/research-assistant"
+    },
+    {
+      "id": "phuong-huy-pham",
+      "displayName": "Phuong Huy Pham",
+      "aliases": [
+        "Phuong Huy Pham"
+      ],
+      "category": "research-assistant",
+      "status": "active",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/research-assistant"
+    },
+    {
+      "id": "tien-dat-le",
+      "displayName": "Tien Dat Le",
+      "aliases": [
+        "Tien Dat Le",
+        "Tiendat Le",
+        "TienDat Le"
+      ],
+      "category": "research-assistant",
+      "status": "active",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/research-assistant"
+    },
+    {
+      "id": "phuong-thuy-vu",
+      "displayName": "Phuong Thuy Vu",
+      "aliases": [
+        "Phuong Thuy Vu",
+        "Thuy Phuong Vu",
+        "Thuy Vu Phuong"
+      ],
+      "category": "research-assistant",
+      "status": "active",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/research-assistant"
+    },
+    {
+      "id": "tung-duong-ngo",
+      "displayName": "Tung Duong Ngo",
+      "aliases": [
+        "Tung Duong Ngo",
+        "TungDuong Ngo",
+        "Ngo Tung Duong"
+      ],
+      "category": "student",
+      "status": "active",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+    },
+    {
+      "id": "thuy-luyen-thanh",
+      "displayName": "Thuy Luyen Thanh",
+      "aliases": [
+        "Thuy Luyen Thanh",
+        "Thanhthuy Luyen",
+        "Thanh Thuy Luyen"
+      ],
+      "category": "student",
+      "status": "active",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+    },
+    {
+      "id": "ba-long-nguyen",
+      "displayName": "Ba Long Nguyen",
+      "aliases": [
+        "Ba Long Nguyen"
+      ],
+      "category": "student",
+      "status": "active",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+    },
+    {
+      "id": "quan-nguyen-hoang",
+      "displayName": "Quan Nguyen Hoang",
+      "aliases": [
+        "Quan Nguyen Hoang"
+      ],
+      "category": "student",
+      "status": "active",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+    },
+    {
+      "id": "quang-huy-nguyen",
+      "displayName": "Quang Huy Nguyen",
+      "aliases": [
+        "Quang Huy Nguyen"
+      ],
+      "category": "student",
+      "status": "active",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+    },
+    {
+      "id": "hoa-le-duc",
+      "displayName": "Hoa Le Duc",
+      "aliases": [
+        "Hoa Le Duc",
+        "Hoale Duc",
+        "Le Duc Hoa"
+      ],
+      "category": "student",
+      "status": "active",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+    },
+    {
+      "id": "bao-tram-pham-vu",
+      "displayName": "Bao Tram Pham Vu",
+      "aliases": [
+        "Bao Tram Pham Vu",
+        "Pham Vu Bao Tram",
+        "Bao Tram Vu Pham"
+      ],
+      "category": "student",
+      "status": "active",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+    },
+    {
+      "id": "khai-van-nguyen",
+      "displayName": "Khai Van Nguyen",
+      "aliases": [
+        "Khai Van Nguyen",
+        "Khai Nguyen Van",
+        "Nguyen Van Khai"
+      ],
+      "category": "student",
+      "status": "active",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+    },
+    {
+      "id": "hoang-hau-nguyen",
+      "displayName": "Hoang Hau Nguyen",
+      "aliases": [
+        "Hoang Hau Nguyen"
+      ],
+      "category": "student",
+      "status": "active",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+    },
+    {
+      "id": "hieu-trieu-trung",
+      "displayName": "Hieu Trieu Trung",
+      "aliases": [
+        "Hieu Trieu Trung",
+        "Trung Hieu Trieu"
+      ],
+      "category": "student",
+      "status": "active",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+    },
+    {
+      "id": "nhat-long-do",
+      "displayName": "Nhat Long Do",
+      "aliases": [
+        "Nhat Long Do"
+      ],
+      "category": "student",
+      "status": "active",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+    },
+    {
+      "id": "dinh-hieu-nguyen",
+      "displayName": "Dinh Hieu Nguyen",
+      "aliases": [
+        "Dinh Hieu Nguyen"
+      ],
+      "category": "student",
+      "status": "active",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+    },
+    {
+      "id": "tuan-nguyen-huu",
+      "displayName": "Tuan Nguyen Huu",
+      "aliases": [
+        "Tuan Nguyen Huu",
+        "Nguyen Huu Tuan"
+      ],
+      "category": "student",
+      "status": "active",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+    },
+    {
+      "id": "khoi-do-duc",
+      "displayName": "Khoi Do Duc",
+      "aliases": [
+        "Khoi Do Duc",
+        "Duc Khoi Do",
+        "Do Duc Khoi"
+      ],
+      "category": "student",
+      "status": "active",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+    },
+    {
+      "id": "anh-tran-le",
+      "displayName": "Anh Tran Le",
+      "aliases": [
+        "Anh Tran Le"
+      ],
+      "category": "student",
+      "status": "active",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+    },
+    {
+      "id": "duc-truong-cong",
+      "displayName": "Duc Truong Cong",
+      "aliases": [
+        "Duc Truong Cong",
+        "Congduc Truong",
+        "Cong Duc Truong"
+      ],
+      "category": "student",
+      "status": "active",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+    },
+    {
+      "id": "quyet-vu-xuan",
+      "displayName": "Quyet Vu Xuan",
+      "aliases": [
+        "Quyet Vu Xuan"
+      ],
+      "category": "student",
+      "status": "active",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+    },
+    {
+      "id": "nga-nguyen-thi-uyen",
+      "displayName": "Nga Nguyen Thi Uyen",
+      "aliases": [
+        "Nga Nguyen Thi Uyen"
+      ],
+      "category": "student",
+      "status": "active",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+    },
+    {
+      "id": "chi-le-lan",
+      "displayName": "Chi Le Lan",
+      "aliases": [
+        "Chi Le Lan"
+      ],
+      "category": "student",
+      "status": "active",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+    },
+    {
+      "id": "minh-hoang-pham",
+      "displayName": "Minh Hoang Pham",
+      "aliases": [
+        "Minh Hoang Pham"
+      ],
+      "category": "student",
+      "status": "active",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+    },
+    {
+      "id": "thanh-dat-ly",
+      "displayName": "Thanh Dat Ly",
+      "aliases": [
+        "Thanh Dat Ly",
+        "Ly Thanh Dat"
+      ],
+      "category": "student",
+      "status": "active",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+    },
+    {
+      "id": "kim-sam-le",
+      "displayName": "Kim Sam Le",
+      "aliases": [
+        "Kim Sam Le"
+      ],
+      "category": "student",
+      "status": "active",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+    },
+    {
+      "id": "xuan-hieu-nguyen",
+      "displayName": "Xuan Hieu Nguyen",
+      "aliases": [
+        "Xuan Hieu Nguyen"
+      ],
+      "category": "student",
+      "status": "active",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+    },
+    {
+      "id": "huu-thuan-vo",
+      "displayName": "Huu Thuan Vo",
+      "aliases": [
+        "Huu Thuan Vo"
+      ],
+      "category": "student",
+      "status": "active",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+    },
+    {
+      "id": "hung-chau-tien",
+      "displayName": "Hung Chau Tien",
+      "aliases": [
+        "Hung Chau Tien"
+      ],
+      "category": "student",
+      "status": "active",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+    },
+    {
+      "id": "ninh-vu-thi-thuy",
+      "displayName": "Ninh Vu Thi Thuy",
+      "aliases": [
+        "Ninh Vu Thi Thuy"
+      ],
+      "category": "student",
+      "status": "active",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+    },
+    {
+      "id": "dat-nguyen-thanh",
+      "displayName": "Dat Nguyen Thanh",
+      "aliases": [
+        "Dat Nguyen Thanh"
+      ],
+      "category": "student",
+      "status": "active",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+    },
+    {
+      "id": "trung-nguyen-quang",
+      "displayName": "Trung Nguyen Quang",
+      "aliases": [
+        "Trung Nguyen Quang"
+      ],
+      "category": "student",
+      "status": "active",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+    },
+    {
+      "id": "ngoc-pham-minh-dang",
+      "displayName": "Ngoc Pham Minh Dang",
+      "aliases": [
+        "Ngoc Pham Minh Dang"
+      ],
+      "category": "student",
+      "status": "active",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+    },
+    {
+      "id": "tu-doan-manh",
+      "displayName": "Tu Doan Manh",
+      "aliases": [
+        "Tu Doan Manh"
+      ],
+      "category": "student",
+      "status": "active",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+    },
+    {
+      "id": "thuong-pham-cong",
+      "displayName": "Thuong Pham Cong",
+      "aliases": [
+        "Thuong Pham Cong",
+        "Cong Thuong Pham",
+        "Cong-Thuong Pham"
+      ],
+      "category": "alumni",
+      "status": "alumni",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/alumni"
+    },
+    {
+      "id": "duc-minh-le",
+      "displayName": "Duc Minh Le",
+      "aliases": [
+        "Duc Minh Le"
+      ],
+      "category": "alumni",
+      "status": "alumni",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/alumni"
+    },
+    {
+      "id": "vu-hien-pham",
+      "displayName": "Vu Hien Pham",
+      "aliases": [
+        "Vu Hien Pham",
+        "Hien Vu Pham",
+        "Pham Vu Hien",
+        "Hien Pham Vu"
+      ],
+      "category": "alumni",
+      "status": "alumni",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/alumni"
+    },
+    {
+      "id": "manh-duy-ngo",
+      "displayName": "Manh Duy Ngo",
+      "aliases": [
+        "Manh Duy Ngo",
+        "Manhduy Ngo",
+        "Ngo Manh Duy"
+      ],
+      "category": "alumni",
+      "status": "alumni",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/alumni"
+    },
+    {
+      "id": "le-hoang-cong",
+      "displayName": "Le Hoang Cong",
+      "aliases": [
+        "Le Hoang Cong",
+        "Hoangcong Le",
+        "Hoang Cong Le"
+      ],
+      "category": "alumni",
+      "status": "alumni",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/alumni"
+    },
+    {
+      "id": "sy-phuong-hoang",
+      "displayName": "Sy Phuong Hoang",
+      "aliases": [
+        "Sy Phuong Hoang"
+      ],
+      "category": "alumni",
+      "status": "alumni",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/alumni"
+    },
+    {
+      "id": "hoai-dung-tran-thi",
+      "displayName": "Hoai Dung Tran Thi",
+      "aliases": [
+        "Hoai Dung Tran Thi",
+        "Tran Thi Hoai Dung",
+        "Thi Hoai Dung Tran"
+      ],
+      "category": "alumni",
+      "status": "alumni",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/alumni"
+    },
+    {
+      "id": "tuan-kiet-tran-mach",
+      "displayName": "Tuan Kiet Tran Mach",
+      "aliases": [
+        "Tuan Kiet Tran Mach"
+      ],
+      "category": "alumni",
+      "status": "alumni",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/alumni"
+    },
+    {
+      "id": "huu-trung-nguyen",
+      "displayName": "Huu Trung Nguyen",
+      "aliases": [
+        "Huu Trung Nguyen",
+        "Trung Nguyen Huu",
+        "Nguyen Huu Trung"
+      ],
+      "category": "alumni",
+      "status": "alumni",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/alumni"
+    }
+  ]
+}

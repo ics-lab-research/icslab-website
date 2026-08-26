@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "news": [
+    {
+      "id": "gsme-2026",
+      "slug": "gsme-2026",
+      "title": "Green Propulsion and Smart Marine Engineering Symposium",
+      "date": "2026",
+      "category": "Conference",
+      "summary": "ICSLab joined researchers and engineers at GSME 2026.",
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "ICSLab joined researchers and engineers at GSME 2026."
+        }
+      ],
+      "coverImage": "assets/news-gsme-2026.webp",
+      "coverAlt": "ICSLab members at the GSME 2026 symposium",
+      "featured": true,
+      "status": "published"
+    },
+    {
+      "id": "student-research-awards",
+      "slug": "student-research-awards",
+      "title": "Outstanding student research awards",
+      "date": "2026",
+      "category": "Achievement",
+      "summary": "Multiple ICSLab teams advanced with awarded work in AI and NDT.",
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Multiple ICSLab teams advanced with awarded work in AI and NDT."
+        }
+      ],
+      "coverImage": "assets/news-student-conference.webp",
+      "coverAlt": "ICSLab students receiving awards at a research conference",
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "sci-2026-best-paper",
+      "slug": "sci-2026-best-paper",
+      "title": "Best Paper Award at SCI 2026",
+      "date": "2026",
+      "category": "Award",
+      "summary": "Recognition for training-free visual anomaly detection research.",
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Recognition for training-free visual anomaly detection research."
+        }
+      ],
+      "coverImage": "assets/news-sci-2026.webp",
+      "coverAlt": "ICSLab members attending the SCI 2026 conference",
+      "featured": false,
+      "status": "published"
+    }
+  ]
+}

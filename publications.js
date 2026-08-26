@@ -3,11 +3,21 @@ const publicationArchive = document.querySelector("[data-publications-all]");
 const publicationCount = document.querySelector("[data-publication-count]");
 const publicationRetrieved = document.querySelector("[data-publication-retrieved]");
 
+const publicationTypeLabel = (publication) => {
+  const type = publication.type === "legacy" ? publication.legacyType : publication.type;
+  return {
+    journal: "Journal article",
+    conference: "Conference paper",
+    "book-chapter": "Book chapter",
+  }[type] || "International publication";
+};
+
 const createPublicationLink = (publication) => {
-  if (!publication.url) return null;
+  const url = window.ICSLabContent.publicationUrl(publication);
+  if (!url) return null;
 
   const link = document.createElement("a");
-  link.href = publication.url;
+  link.href = url;
   link.target = "_blank";
   link.rel = "noreferrer";
   link.textContent = "Open publication ↗";
@@ -15,7 +25,13 @@ const createPublicationLink = (publication) => {
   return link;
 };
 
-const renderRecentPublications = (publications) => {
+const createCitation = (publication, membersById) => {
+  const citation = document.createElement("p");
+  window.ICSLabContent.appendPublicationCitation(citation, publication, membersById);
+  return citation;
+};
+
+const renderRecentPublications = (publications, membersById) => {
   if (!recentPublications) return;
 
   const limit = Number(recentPublications.dataset.limit) || 4;
@@ -26,17 +42,15 @@ const renderRecentPublications = (publications) => {
       const type = document.createElement("span");
       const year = document.createElement("time");
       const title = document.createElement("h3");
-      const citation = document.createElement("p");
 
       meta.className = "publication-meta";
-      type.textContent = "International publication";
+      type.textContent = publicationTypeLabel(publication);
       year.dateTime = String(publication.year);
       year.textContent = String(publication.year);
       meta.append(type, year);
 
       title.textContent = publication.title || "International publication";
-      citation.textContent = publication.citation;
-      article.append(meta, title, citation);
+      article.append(meta, title, createCitation(publication, membersById));
 
       const link = createPublicationLink(publication);
       if (link) article.append(link);
@@ -46,7 +60,7 @@ const renderRecentPublications = (publications) => {
   recentPublications.removeAttribute("aria-busy");
 };
 
-const renderPublicationArchive = (publications) => {
+const renderPublicationArchive = (publications, membersById) => {
   if (!publicationArchive) return;
 
   const groups = publications.reduce((years, publication) => {
@@ -55,6 +69,7 @@ const renderPublicationArchive = (publications) => {
     years.set(publication.year, yearPublications);
     return years;
   }, new Map());
+
   publicationArchive.replaceChildren(
     ...Array.from(groups, ([year, yearPublications]) => {
       const section = document.createElement("section");
@@ -69,9 +84,7 @@ const renderPublicationArchive = (publications) => {
       yearPublications.forEach((publication) => {
         const item = document.createElement("li");
         const article = document.createElement("article");
-        const citation = document.createElement("p");
-        citation.textContent = publication.citation;
-        article.append(citation);
+        article.append(createCitation(publication, membersById));
 
         const link = createPublicationLink(publication);
         if (link) article.append(link);
@@ -97,18 +110,25 @@ const showPublicationError = () => {
 };
 
 if (recentPublications || publicationArchive) {
-  fetch("data/publications.json")
-    .then((response) => {
+  Promise.all([
+    fetch("data/publications.json").then((response) => {
       if (!response.ok) throw new Error(`Publication request failed: ${response.status}`);
       return response.json();
-    })
-    .then((data) => {
-      renderRecentPublications(data.publications);
-      renderPublicationArchive(data.publications);
-      if (publicationCount) publicationCount.textContent = data.publications.length;
+    }),
+    fetch("data/members.json").then((response) => {
+      if (!response.ok) throw new Error(`Member request failed: ${response.status}`);
+      return response.json();
+    }),
+  ])
+    .then(([publicationData, memberData]) => {
+      const visiblePublications = publicationData.publications.filter(({ status }) => status !== "draft");
+      const membersById = new Map(memberData.members.map((member) => [member.id, member]));
+      renderRecentPublications(visiblePublications, membersById);
+      renderPublicationArchive(visiblePublications, membersById);
+      if (publicationCount) publicationCount.textContent = visiblePublications.length;
       if (publicationRetrieved) {
-        publicationRetrieved.dateTime = data.retrieved;
-        publicationRetrieved.textContent = data.retrieved;
+        publicationRetrieved.dateTime = publicationData.retrieved;
+        publicationRetrieved.textContent = publicationData.retrieved;
       }
     })
     .catch(showPublicationError);

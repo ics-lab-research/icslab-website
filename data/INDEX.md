@@ -1,11 +1,9 @@
 # Publication Data
 
-`publications.json` is the shared content source for homepage recent publications
-and the full international publication archive.
+This directory is the public website's structured content source.
 
 ## Shape
 
-- `source` — original international publications page
-- `retrieved` — ISO date of the latest source refresh
-- `publications` — newest-first records containing `year`, `citation`, optional
-  `title`, and optional `url`
+- `publications.json` — structured publications plus lossless legacy citation overrides
+- `members.json` — stable lab-member IDs, aliases, categories, and highlight policy
+- `news.json` — homepage and archive news records

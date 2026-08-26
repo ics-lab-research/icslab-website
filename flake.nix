@@ -4,6 +4,13 @@
     systems.url = "github:nix-systems/default";
     devenv.url = "github:cachix/devenv";
     devenv.inputs.nixpkgs.follows = "nixpkgs";
+
+    # python for editor tool
+    nixpkgs-python = {
+      url = "github:cachix/nixpkgs-python";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   nixConfig = {
@@ -41,6 +48,20 @@
                   enable = true;
                   lsp.enable = true;
                 };
+
+                languages.python = {
+                  enable = true;
+                  lsp.enable = true;
+                  version = "3.14";
+                  uv = {
+                    enable = true;
+                    sync.enable = true;
+                  };
+                };
+
+                enterShell = ''
+                  source .devenv/state/venv/bin/activate
+                '';
               }
             ];
           };

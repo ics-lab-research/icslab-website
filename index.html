@@ -23,7 +23,9 @@
     <link rel="canonical" href="https://ics-lab-research.github.io/icslab-website/" />
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
+    <script src="content-format.js" defer></script>
     <script src="publications.js" defer></script>
+    <script src="news.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -51,7 +53,7 @@
           <a href="#about">About</a>
           <a href="#research">Research</a>
           <a href="publications.html">Publications</a>
-          <a href="#news">News</a>
+          <a href="news.html">News</a>
           <a href="#people">People</a>
           <a class="nav-cta" href="#join">Join us</a>
         </nav>
@@ -256,54 +258,14 @@
               <p class="section-kicker">Lab updates</p>
               <h2>Ideas in motion.</h2>
             </div>
-            <p>Recent conferences, student research, and team achievements.</p>
+            <div class="section-heading-action">
+              <p>Recent conferences, student research, and team achievements.</p>
+              <a class="text-link" href="news.html">View all news <span aria-hidden="true">→</span></a>
+            </div>
           </div>
 
-          <div class="news-grid">
-            <article class="news-card featured-news">
-              <img
-                src="assets/news-gsme-2026.webp"
-                alt="ICSLab members at the GSME 2026 symposium"
-                width="900"
-                height="560"
-                loading="lazy"
-              />
-              <div>
-                <span class="news-type">Conference</span>
-                <h3>Green Propulsion and Smart Marine Engineering Symposium</h3>
-                <p>ICSLab joined researchers and engineers at GSME 2026.</p>
-              </div>
-            </article>
-
-            <article class="news-card">
-              <img
-                src="assets/news-student-conference.webp"
-                alt="ICSLab students receiving awards at a research conference"
-                width="900"
-                height="560"
-                loading="lazy"
-              />
-              <div>
-                <span class="news-type">Achievement</span>
-                <h3>Outstanding student research awards</h3>
-                <p>Multiple ICSLab teams advanced with awarded work in AI and NDT.</p>
-              </div>
-            </article>
-
-            <article class="news-card">
-              <img
-                src="assets/news-sci-2026.webp"
-                alt="ICSLab members attending the SCI 2026 conference"
-                width="900"
-                height="560"
-                loading="lazy"
-              />
-              <div>
-                <span class="news-type">Award</span>
-                <h3>Best Paper Award at SCI 2026</h3>
-                <p>Recognition for training-free visual anomaly detection research.</p>
-              </div>
-            </article>
+          <div class="news-grid" data-news-recent data-limit="3" aria-live="polite" aria-busy="true">
+            <p class="publication-loading">Loading recent news…</p>
           </div>
         </div>
       </section>

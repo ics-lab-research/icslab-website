@@ -12,6 +12,18 @@ python3 -m http.server 8000
 
 Open <http://localhost:8000>.
 
+## Local content editor
+
+The editor has no account or sign-in. It binds only to `127.0.0.1` and writes
+validated JSON directly to this repository.
+
+```bash
+python3 tools/content-editor/server.py
+```
+
+Open <http://127.0.0.1:8001/editor/>. Review `git diff` before pushing changes.
+Never expose the editor port to a network or deploy it as a public service.
+
 ## Publish with GitHub Pages
 
 1. Push this repository to GitHub.
@@ -33,9 +45,15 @@ domain in GitHub **Settings → Pages**, then update DNS.
 
 - Main content: `index.html`
 - International publications: `data/publications.json`
+- Lab author registry: `data/members.json`
+- News: `data/news.json`
 - Publication page structure: `publications.html`
+- News page structure: `news.html`
 - Domestic publication placeholder: `domestic-publications.html`
 - Design: `styles.css`
 - Mobile navigation: `script.js`
 - Publication rendering: `publications.js`
+- Shared citation formatting: `content-format.js`
+- News rendering: `news.js`
+- Local editor: `tools/content-editor/`
 - Images: `assets/`

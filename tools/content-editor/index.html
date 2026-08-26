@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ICSLab Content Editor</title>
+    <link rel="stylesheet" href="/editor/editor.css" />
+    <script src="/shared/content-format.js" defer></script>
+    <script src="/editor/editor.js" defer></script>
+  </head>
+  <body>
+    <header class="editor-header">
+      <div>
+        <p>Localhost content tool</p>
+        <h1>ICSLab Editor</h1>
+      </div>
+      <div class="local-warning">
+        <strong>No sign-in</strong>
+        <span>Safe only while served from 127.0.0.1.</span>
+      </div>
+    </header>
+
+    <nav class="editor-tabs" aria-label="Content types">
+      <button type="button" aria-selected="true" data-tab="publications">Publications</button>
+      <button type="button" aria-selected="false" data-tab="members">Members</button>
+      <button type="button" aria-selected="false" data-tab="news">News</button>
+    </nav>
+
+    <div class="editor-status" role="status" aria-live="polite" data-status>
+      Loading content…
+    </div>
+
+    <main>
+      <section class="editor-panel is-active" data-panel="publications">
+        <aside class="record-sidebar">
+          <div class="sidebar-heading">
+            <div>
+              <p>International</p>
+              <h2>Publications</h2>
+            </div>
+            <button class="primary-button" type="button" data-new-publication>New</button>
+          </div>
+          <label>
+            Search
+            <input type="search" data-publication-search placeholder="Title, citation, year…" />
+          </label>
+          <div class="record-list" data-publication-list></div>
+        </aside>
+
+        <form class="record-form" data-publication-form>
+          <div class="form-heading">
+            <div>
+              <p>Publication record</p>
+              <h2 data-publication-form-title>New publication</h2>
+            </div>
+            <div class="form-actions">
+              <button class="danger-button" type="button" data-delete-publication hidden>Delete</button>
+              <button class="primary-button" type="submit">Save publication</button>
+            </div>
+          </div>
+
+          <p class="form-note" data-legacy-note hidden>
+            Legacy citation preserved exactly. Add structured fields gradually; remove the override only after review.
+          </p>
+
+          <div class="field-grid three-columns">
+            <label>ID <input name="id" required pattern="[a-z0-9]+(?:-[a-z0-9]+)*" /></label>
+            <label>
+              Type
+              <select name="type" required>
+                <option value="journal">Journal article</option>
+                <option value="conference">Conference paper</option>
+                <option value="book-chapter">Book chapter</option>
+                <option value="legacy">Legacy record</option>
+              </select>
+            </label>
+            <label>
+              Status
+              <select name="status" required>
+                <option value="draft">Draft</option>
+                <option value="accepted">Accepted</option>
+                <option value="online-first">Online first</option>
+                <option value="published">Published</option>
+              </select>
+            </label>
+            <label>Year <input name="year" type="number" min="1900" max="2100" required /></label>
+            <label>Publication date <input name="publicationDate" placeholder="2026 or 2026-08-26" /></label>
+            <label>Legacy type <input name="legacyType" placeholder="journal" /></label>
+          </div>
+
+          <label>Title <textarea name="title" rows="2"></textarea></label>
+
+          <fieldset>
+            <div class="fieldset-heading">
+              <legend>Ordered authors</legend>
+              <button type="button" data-add-author>Add author</button>
+            </div>
+            <div class="author-list" data-author-list></div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Venue</legend>
+            <div class="field-grid three-columns">
+              <label class="wide-field">Journal, conference, or book <input name="venueName" /></label>
+              <label>Volume <input name="volume" /></label>
+              <label>Issue <input name="issue" /></label>
+              <label>Part <input name="part" /></label>
+              <label>Pages <input name="pages" /></label>
+              <label>Article number <input name="articleNumber" /></label>
+              <label>Publisher <input name="publisher" /></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Identifiers and ranking</legend>
+            <div class="field-grid three-columns">
+              <label class="wide-field">DOI <input name="doi" placeholder="10.xxxx/…" /></label>
+              <label class="wide-field">Publication URL <input name="url" type="url" /></label>
+              <label>Quartile <input name="quartile" placeholder="Q1" /></label>
+              <label>Quartile year <input name="quartileYear" type="number" min="1900" max="2100" /></label>
+              <label>Impact factor <input name="impactFactor" type="number" min="0" step="0.001" /></label>
+              <label>Impact-factor year <input name="impactFactorYear" type="number" min="1900" max="2100" /></label>
+              <label>Ranking source <input name="rankingSystem" placeholder="JCR, SJR…" /></label>
+              <label class="wide-field">Indexing <input name="indexing" placeholder="SCIE, Scopus" /></label>
+            </div>
+          </fieldset>
+
+          <label>
+            Citation override
+            <textarea name="citationOverride" rows="5"></textarea>
+            <small>Leave empty for generated citation. Existing legacy text should remain until professor review.</small>
+          </label>
+
+          <section class="preview-card" aria-labelledby="publication-preview-title">
+            <p>Exact public preview</p>
+            <h3 id="publication-preview-title" data-publication-preview-title>Publication title</h3>
+            <div data-publication-preview-citation></div>
+          </section>
+        </form>
+      </section>
+
+      <section class="editor-panel" data-panel="members" hidden>
+        <aside class="record-sidebar">
+          <div class="sidebar-heading">
+            <div><p>Author registry</p><h2>Members</h2></div>
+            <button class="primary-button" type="button" data-new-member>New</button>
+          </div>
+          <label>Search <input type="search" data-member-search placeholder="Name or alias…" /></label>
+          <div class="record-list" data-member-list></div>
+        </aside>
+
+        <form class="record-form compact-form" data-member-form>
+          <div class="form-heading">
+            <div><p>Member record</p><h2 data-member-form-title>New member</h2></div>
+            <div class="form-actions">
+              <button class="danger-button" type="button" data-delete-member hidden>Delete</button>
+              <button class="primary-button" type="submit">Save member</button>
+            </div>
+          </div>
+          <div class="field-grid two-columns">
+            <label>ID <input name="id" required pattern="[a-z0-9]+(?:-[a-z0-9]+)*" /></label>
+            <label>Display name <input name="displayName" required /></label>
+            <label>
+              Category
+              <select name="category" required>
+                <option value="professor">Professor</option>
+                <option value="phd">PhD</option>
+                <option value="research-assistant">Research assistant</option>
+                <option value="student">Student</option>
+                <option value="alumni">Alumni</option>
+              </select>
+            </label>
+            <label>
+              Status
+              <select name="status" required>
+                <option value="active">Active</option>
+                <option value="alumni">Alumni</option>
+                <option value="inactive">Inactive</option>
+              </select>
+            </label>
+            <label class="full-field">Aliases <textarea name="aliases" rows="6" placeholder="One alias per line"></textarea></label>
+            <label class="full-field">Profile URL <input name="profileUrl" type="url" /></label>
+            <label class="check-field full-field">
+              <input name="highlightInPublications" type="checkbox" checked />
+              Bold this member in publication citations
+            </label>
+          </div>
+        </form>
+      </section>
+
+      <section class="editor-panel" data-panel="news" hidden>
+        <aside class="record-sidebar">
+          <div class="sidebar-heading">
+            <div><p>Public updates</p><h2>News</h2></div>
+            <button class="primary-button" type="button" data-new-news>New</button>
+          </div>
+          <label>Search <input type="search" data-news-search placeholder="Title, category, date…" /></label>
+          <div class="record-list" data-news-list></div>
+        </aside>
+
+        <form class="record-form compact-form" data-news-form>
+          <div class="form-heading">
+            <div><p>News record</p><h2 data-news-form-title>New news item</h2></div>
+            <div class="form-actions">
+              <button class="danger-button" type="button" data-delete-news hidden>Delete</button>
+              <button class="primary-button" type="submit">Save news</button>
+            </div>
+          </div>
+          <div class="field-grid two-columns">
+            <label>ID <input name="id" required pattern="[a-z0-9]+(?:-[a-z0-9]+)*" /></label>
+            <label>Slug <input name="slug" required pattern="[a-z0-9]+(?:-[a-z0-9]+)*" /></label>
+            <label class="full-field">Title <input name="title" required /></label>
+            <label>Date <input name="date" required placeholder="2026 or 2026-08-26" /></label>
+            <label>Category <input name="category" required /></label>
+            <label>
+              Status
+              <select name="status" required>
+                <option value="draft">Draft</option>
+                <option value="published">Published</option>
+              </select>
+            </label>
+            <label class="check-field"><input name="featured" type="checkbox" /> Featured</label>
+            <label class="full-field">Summary <textarea name="summary" rows="3" required></textarea></label>
+            <label class="full-field">
+              Body
+              <textarea name="body" rows="10" placeholder="Separate paragraphs with a blank line. Start headings with ## "></textarea>
+            </label>
+            <label class="full-field">
+              Cover image path
+              <input name="coverImage" placeholder="assets/news-example.webp" />
+              <small>Add an optimized image to assets first.</small>
+            </label>
+            <label class="full-field">Cover image alternative text <input name="coverAlt" /></label>
+          </div>
+          <section class="preview-card news-preview" data-news-preview></section>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
