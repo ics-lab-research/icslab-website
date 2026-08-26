@@ -14,7 +14,7 @@ JSON files.
 ## Run
 
 ```bash
-python3 tools/content-editor/server.py
+uv run editor
 ```
 
 Open `http://127.0.0.1:8001/editor/`.

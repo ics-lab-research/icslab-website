@@ -340,7 +340,7 @@ class EditorHandler(BaseHTTPRequestHandler):
         elif route == "/editor/editor.js":
             self._file(EDITOR_ROOT / "editor.js", "text/javascript; charset=utf-8")
         elif route == "/shared/content-format.js":
-            self._file(ROOT / "content-format.js", "text/javascript; charset=utf-8")
+            self._file(ROOT / "scripts" / "content-format.js", "text/javascript; charset=utf-8")
         elif route.startswith("/assets/"):
             asset = (ROOT / route.lstrip("/")).resolve()
             assets_root = (ROOT / "assets").resolve()

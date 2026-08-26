@@ -7,7 +7,7 @@ Pages can publish it directly without a build step.
 ## Preview
 
 ```bash
-python3 -m http.server 8000
+uv run web
 ```
 
 Open <http://localhost:8000>.
@@ -18,7 +18,7 @@ The editor has no account or sign-in. It binds only to `127.0.0.1` and writes
 validated JSON directly to this repository.
 
 ```bash
-python3 tools/content-editor/server.py
+uv run editor
 ```
 
 Open <http://127.0.0.1:8001/editor/>. Review `git diff` before pushing changes.
@@ -56,10 +56,10 @@ domain in GitHub **Settings → Pages**, then update DNS.
 - Publication page structure: `publications.html`
 - News page structure: `news.html`
 - Domestic publication placeholder: `domestic-publications.html`
-- Design: `styles.css`
-- Mobile navigation: `script.js`
-- Publication rendering: `publications.js`
-- Shared citation formatting: `content-format.js`
-- News rendering: `news.js`
+- Design: `styles/styles.css`
+- Mobile navigation: `scripts/script.js`
+- Publication rendering: `scripts/publications.js`
+- Shared citation formatting: `scripts/content-format.js`
+- News rendering: `scripts/news.js`
 - Local editor: `tools/content-editor/`
 - Images: `assets/`
