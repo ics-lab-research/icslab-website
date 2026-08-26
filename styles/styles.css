@@ -1417,24 +1417,24 @@ a {
 
 .person-card {
   display: grid;
-  grid-template-columns: 72px 1fr;
-  gap: 20px;
+  grid-template-columns: 160px 1fr;
+  gap: 30px;
   align-items: start;
-  padding: 22px 4px;
+  padding: 26px 4px;
   border-bottom: 1px solid var(--line);
 }
 
 .person-card > img {
-  width: 72px;
-  height: 72px;
+  width: 160px;
+  height: 200px;
   display: block;
-  object-fit: cover;
-  border-radius: 50%;
+  object-fit: contain;
+  border-radius: 8px;
   background: #e8edf5;
 }
 
 .person-card-role {
-  margin: 0 0 4px;
+  margin: 5px 0 0;
   color: var(--orange);
   font-size: 0.7rem;
   font-weight: 800;

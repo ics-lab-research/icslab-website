@@ -1,6 +1,5 @@
 const peopleDirectory = document.querySelector("[data-people-directory]");
 const peopleTabs = [...document.querySelectorAll("[data-people-tab]")];
-const peopleTotal = document.querySelector("[data-people-total]");
 const peopleKicker = document.querySelector("[data-people-kicker]");
 const peopleTitle = document.querySelector("[data-people-title]");
 
@@ -65,7 +64,7 @@ const createPersonCard = (member, groupLabel) => {
     contact.textContent = member.email ? `Email as published: ${member.email}` : "Email not listed";
   }
 
-  body.append(role, title, contact);
+  body.append(title, role, contact);
   if (member.bio) {
     const bio = document.createElement("p");
     bio.className = "person-card-bio";
@@ -106,7 +105,6 @@ if (peopleDirectory) {
       return response.json();
     })
     .then((data) => {
-      peopleTotal.textContent = data.members.length;
       renderPeople(data.members, selectedGroup());
       peopleTabs.forEach((tab) => {
         tab.addEventListener("click", (event) => {
