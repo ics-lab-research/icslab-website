@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "source": "https://icslab.phenikaa-uni.edu.vn/members",
   "retrieved": "2026-08-26",
   "members": [
@@ -14,7 +14,12 @@
       "category": "professor",
       "status": "active",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/professors"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/professors",
+      "profileTitle": "Dr. Minhhuy Le",
+      "bio": "Dr. Minhhuy Le, Head of ICSLab , received a BSc degree in Mechatronics at Hanoi University of Science and Technology, Vietnam in 2009. He got a Ph.D. degree in Control and Instrumentation, Chosun University, Korea, in 2014. From 2019, he is working for the Faculty of Electrical and Electronic Engineering, Phenikaa University, Vietnam. His interests are non-destructive testing, UWB radar, signal processing, artificial intelligence, and big data.",
+      "email": "huy.leminh@phenikaa-uni.edu.vn",
+      "image": "assets/people/minhhuy-le.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQUA2z2FzB6RNfy1ecWFh6HM5IqAEI2eHFA_Y6WnZoRdyxsEHw5S78BtyZ5wZpf9zLH7ozEw67Do0B2qq4MTEOZEcwnd2xGw3J8yeIvXRfKFteNokqN52hdmMvDdLRnQf97XEoTtPohKwEl_G_0pmlv-7MvD8uQ05isgD9UBcouSssCQ11aX6kGnjIJ7i3YR5gW5hkQeO0n7DckAZdZyEn54S5RZa_7TzO1vp4IE2Y4=w1280"
     },
     {
       "id": "van-su-luong",
@@ -28,7 +33,12 @@
       "category": "professor",
       "status": "active",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/professors"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/professors",
+      "profileTitle": "Dr. Van Su Luong",
+      "bio": "Dr. Van Su Luong, a K ey member, received his Bachelor in Electronic and Electrical Engineering from Hung Yen University of Technology and Education, Vietnam, in 2008. He received his Ph.D. degree in Mechanical Engineering from the Department of Mechanical Engineering, National Kaohsiung University of Applied Sciences, Kaohsiung, Taiwan in 2016. Since 2018, he is an employee of Faculty of Electrical and Electronic Engineering, Phenikaa University. His research interests include Fluxgate, Spin valve-GMR and TMR magnetometers, Current sensors, E-compass, Eddy-current detectors (EC-NDE), Magnetic Adaptive Testing (MAT-NDE), CMOS-MEMS sensors, and the other Spintronic devices. Dr. Luong was a member of the IEEE Magnetics Society.",
+      "email": "su.luongvan@phenikaa-uni.edu.vn",
+      "image": "assets/people/van-su-luong.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQW3Kg824C5SHKGjYLWlkSMigmkiswYDaiq1RZwFWQaZxwBCPdAk-g3MZiU_1ICau3sOFOzZRBRvJmSiidGJKUdO71jX5MAR9DCB6mIsD_sEeyLGgelyKb_nmQRlw1dUxQ6eOfSMrUmp7i2Gf5NptxTmYkzaikhQYchbxoQpve2aFC_b5Nh9NSswZeKkQEWDN54W9xEnsRdXm3PhZBnkwF_WvVgXCjUbuqvAJAMbFGQ=w1280"
     },
     {
       "id": "tran-huy-hung",
@@ -41,7 +51,12 @@
       "category": "professor",
       "status": "active",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/professors"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/professors",
+      "profileTitle": "Dr. Tran Huy Hung",
+      "bio": "Dr. Tran Huy Hung, a Key member, is a dedicated researcher and educator in the field of Electrical and Electronics Engineering. He earned his Bachelor's degree in Electronics and Telecommunications from Hanoi University of Science and Technology in 2013, followed by a Master's degree in Electronics – Computer Engineering from Ajou University, South Korea, in 2015. In 2020, he successfully defended his Ph.D. dissertation in Electrical and Electronics Engineering at Dongguk University, South Korea. Since July 2020, Dr. Hung has been a faculty member in the Department of Electrical and Electronics Engineering at Phenikaa University. His research areas include Reconfigurable antennas; Wideband antennas ; Antennas for mobile devices ; MIMO antennas .",
+      "email": "hung.tranhuy@phenikaa-uni.edu.vn",
+      "image": "assets/people/tran-huy-hung.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQUyu-tvehCFmsVA2PoQU13rPj5uTpcswTw4_AhVnp7Qx0O_6QrxtqD6sulgSXt0afvkYVaXMeLUT4NKDIk07mZfQwUJypXTpR-lZ4rW2HDXz0C1gSgDIiMfg92r6vbS_SLIVuxRMcrUswgf74HoVLg82fd-PekukhFPmLJEubN6vTWdNg-jUYqmwgEFTje9-smTj-zVIAEdRKNZKIxS3M35AKyfV5eSM7iO27fIDUY=w1280"
     },
     {
       "id": "dang-khanh-le",
@@ -53,7 +68,12 @@
       "category": "professor",
       "status": "active",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/professors"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/professors",
+      "profileTitle": "Dr. Dang-Khanh Le",
+      "bio": "Dang-Khanh Le, e Key member, received his B.S from the Department of Marine Engineering, Vietnam Maritime University, Haiphong, Vietnam in 2006. He received M.S and PhD degrees in the Department of Marine Engineering, Mokpo National Maritime University, South Korea in 2016, 2012 respectively. He was in position of Postdoc at iSL of Mokpo National University in 2016. He is currently a lecturer at Vietnam Maritime University. His research interests include Instrumentation & Automation Control, Modeling and Simulation: UAV (hexacopter, quadcopter), Ultrasonic Technologies and Applications, Wireless Communications and Signal Processing, Iterative Learning Control (ILC), and Intelligent Transportation Systems .",
+      "email": "ledangkhanh@vimaru.edu.vn",
+      "image": "assets/people/dang-khanh-le.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQUqixwqfbWmIGuW8hR0LtYMjKpqXu8cW1OLDNiWwIOEKXjF4wdtlAsvL-bddiTk2l-bIueNjJ3eq_rv0DSNDrMsiij_voBPXRKR2CWnDy4kb1rJcsgVC5Ay9WcuLlsn-IFC8N-Hc479xoGaFWsyHSxQLa1_cfZtyIfqDfsWfJWmkJ1XtHOsFtMki_uVuPIAvjs4PnBS0PZxxZGEC5APNTVdVPzd7KDXHkXxePqa=w1280"
     },
     {
       "id": "vuong-quang-pham",
@@ -67,7 +87,12 @@
       "category": "phd",
       "status": "active",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/phd"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/phd",
+      "profileTitle": "Vuong Quang Pham, PhD",
+      "bio": "Quang Vuong Pham is a PhD student in Control and Automation Engineering. He received a Master's degree in Control and Automation Engineering from Hanoi University of Science and Technology, Vietnam in 2013. He has worked as an engineer in several manufacturing plants. Then, from 2022 has been a lecturer at the Faculty of Electrical and Electronics Engineering, Phenikaa University, Vietnam. He has research interests in signal processing, sensors and non-destructive testing",
+      "email": "vuong.phamquang@phenikaa-uni.edu.vn",
+      "image": "assets/people/vuong-quang-pham.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQXQmnyiydrEXZf-Y6dCJLrQCZ66JQt2ciYR8rda3OgqWXDFTUE36UMgidW3fNWp0ybwdfZVXYbsv1z77jJ0lt7h5V6bYIpcfAbL1JifR1PwC7Oqf-O0x6l057G06KcPLAdsEcM22NBxzb70W3dJ042CbMnHGHazgXjzJvxzDOOtjMNiom3agAfPsgCBXzLrLeR_ArBm8Uc809wxwd9Rec49iXqz3RObBFFf_HB5qfI=w1280"
     },
     {
       "id": "xuanque-nguyen",
@@ -80,7 +105,12 @@
       "category": "phd",
       "status": "active",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/phd"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/phd",
+      "profileTitle": "XuanQue Nguyen, PhD",
+      "bio": "XuanQue Nguyen received a BSc degree in Mechatronics at Hanoi University of Science and Technology, Vietnam in 2009. He got an MSc degree in Satellite Technologies at the University of Science and Technology of Hanoi, Vietnam in 2018. He has worked as a Software Engineer and Project Manager in several companies and institutes. Then, from 2024 he has became a lecturer at the Faculty of Computer Science, Phenikaa University, Vietnam. He has research interests in TinyML and embeded system.",
+      "email": "que.nguyenxuan@phenikaa-uni.edu.vn",
+      "image": "assets/people/xuanque-nguyen.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQXZBMki400WNm6JLDY2BDRgsScM2aLkHDQCzywAVXhU2IaxIGJFtulZ5Zf9Gr8ceKgfTDbL_FEj0I5peW77Rb3B-eq_IHj5t_SO7M13ixhPmXgQf4EOwLpv0-alv0vtNyv0Y7MJZTSOD0sdvkntcGzC4miK23Rv2OZPLOm4I3GvhXbT8Hprpopx76o2ULFviUZ64UuJy_H_GKE8jrWiQeaFSKJmlbtBAcsr1VSX=w1280"
     },
     {
       "id": "the-tuan-trinh",
@@ -92,7 +122,13 @@
       "category": "research-assistant",
       "status": "active",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/research-assistant"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/research-assistant",
+      "profileTitle": "The Tuan Trinh, Engr, RA",
+      "bio": "The Tuan Trinh graduated from Phenikaa University in 2025, majoring in Control and Automation Engineering, and is currently pursuing a Master’s degree in the same field at Phenikaa. His research focuses on artificial intelligence (AI), big data, radar systems, and signal processing , with applications in intelligent sensing and automation .",
+      "email": "tuan.trinhthe@phenikaa-uni.edu.vn",
+      "image": "assets/people/the-tuan-trinh.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQXgw6TKghjAuofOfWNrufHKjiVmyUYko5DUOkZ1uSLS46GUveqtGI45WljZKm5ml1va6AjuC3l5Lk9bGZlEXWbjhjQ9U3M0gsNNeUy9wM-n61BNbHYP-mOqwuT4TzyIW2TX8z__dZHoyd4sL7sqPdc5YsJzF6XdT4e5QUu1wasOuvQFrT5jdrbcPY9UYS5f_Vzp_d_2rdMoqv4QJhV3EFHTwslhtoodYthDlSBS=w1280",
+      "role": "Head of Laboratory"
     },
     {
       "id": "phuong-huy-pham",
@@ -103,7 +139,13 @@
       "category": "research-assistant",
       "status": "active",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/research-assistant"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/research-assistant",
+      "profileTitle": "Phuong Huy Pham, Engr, RA",
+      "bio": "Phuong Huy Pham graduated from Phenikaa University in 2025, majoring in Control and Automation Engineering, and is currently pursuing a Master’s degree in the same field at Phenikaa . His research focuses on Smart Sensors and Non-Destructive Testing (NDT) , with an emphasis on evaluating material defects in industrial applications . In addition, he contributes to the development of specialized probes, automated measurement systems, and signal processing workflows , enhancing the reliability of NDT systems in the laboratory.",
+      "email": "huy.phamphuong@phenikaa-uni.edu.vn",
+      "image": "assets/people/phuong-huy-pham.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQXAXDup0xWSdIoED1or23lIN7KE_vts5w-siNv4zVc-AwPO-cYekUiv9fU0q8a2D1PzoK8aRjpJvB21MkwFS0pqwGixwLvuANY4urjHGWwD78KCefeSguKdPOL6JDZt_VxePrkxhi90mjc6IVMSKuNVHcFTFf5ubjWSceAq6TU-cPLzV8u7l2RWGPsdfVveSTAoYqCQHMDlU-wR6VkcViatklW833G6mGK7k_jJ7J8=w1280",
+      "role": "Deputy Head of Laboratory"
     },
     {
       "id": "tien-dat-le",
@@ -116,7 +158,13 @@
       "category": "research-assistant",
       "status": "active",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/research-assistant"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/research-assistant",
+      "profileTitle": "Tien Dat Le, Engr, RA",
+      "bio": "Tien Dat Le graduated from Phenikaa University in 2025, majoring in Control and Automation Engineering, and is currently pursuing a Master’s degree in the same field at Phenikaa. He focuses on research and development of Large Language Model (LLM) systems, with applications in artificial intelligence, natural language processing, and intelligent platforms.",
+      "email": "dat.letien1@.phenikaa-uni.edu.vn",
+      "image": "assets/people/tien-dat-le.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQXwaNK3hsa2BJTKRpco5Pubjl06gBdms3YEtVUZS1xtxtbusi-XL-a_80OH8EgCZ6KdPUz3yo7g02L1ENi8E3rLlq29490WrIlZzvZoLHRSB9k6kXc5VoEBTrK0vjQOzMW7VuUh9gMAcN56qmSQqGn-NT5U20DwUjd8avIU_U7H4st11rD1Ng4SjmLEleHG_JeMTKCJ3oa2wtWP635hpb8Cfs2cDHV0S8VU5yFnXPA=w1280",
+      "role": "Deputy Head of Laboratory"
     },
     {
       "id": "phuong-thuy-vu",
@@ -129,7 +177,12 @@
       "category": "research-assistant",
       "status": "active",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/research-assistant"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/research-assistant",
+      "profileTitle": "Phuong Thuy Vu, Engr, RA",
+      "bio": "Phuong Thuy Vu is a Research Assistant at ICSLab – Phenikaa University and is currently pursuing a Master’s degree in Artificial Intelligence at Brunel University London, UK. She graduated as the valedictorian of the Artificial Intelligence and Robotics program at Phenikaa University in 2025. Thuy focuses on image processing and applications of artificial intelligence, and is also interested in natural language processing and applying AI in graphic design.",
+      "email": "thuy.vuphuong@phenikaa-uni.edu.vn",
+      "image": "assets/people/phuong-thuy-vu.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQUSZqKeU2dtr4bRuxATpAiK6w22A_oV761U80Uz9Nx2lxzu3K4nSVbe7a8YwoMNuuzaGQgY9qNJb_-5iey4OtySfrAUDRAEjrxak_O9qcggX34GjXOE5p6KJ1TIfevJOH379ffpWPyX31vOxZYLJPmPhHRMhmlAl_Z1Zu7NT4ZeAs1z0L117b_RSEWIA28jl6lJdI1gB1m4n92vXPmAeoL2sGHYYSoQ3L5oPHFA=w1280"
     },
     {
       "id": "tung-duong-ngo",
@@ -142,7 +195,12 @@
       "category": "student",
       "status": "active",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students",
+      "profileTitle": "Tung Duong Ngo, Eng",
+      "bio": "Tung Duong Ngo has been studying Control and Automation Engineering at Phenikaa University since 2022. In 2024, he joined ICSLab, where he focuses his research on Non-Destructive Testing (NDT), particularly the design, simulation, fabrication, and data analysis of advanced sensor systems.",
+      "email": "22010925@st.phenikaa-uni.edu.vn",
+      "image": "assets/people/tung-duong-ngo.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQXgbCRUjjj5cUvB_I9hV_7EE8R0dbBP2Ijbp5CYUXeQO14wlqrmBT73n4qAaFgQGrxL7WLJPENgvGhb9COIVwV1dem8yPLwtM7UMAj18W6Anp9bRaeB6m56PD0AFdedZOF71LyDNwkSN7Vbq_JRKOKEJiO8vRCXJHGsH14MARSYaaqByO6lANXHv74Ph1hF7kFJJuj-u2aDkySZZ9lkv7ZX-DJdhgu_SqDaAvBC=w1280"
     },
     {
       "id": "thuy-luyen-thanh",
@@ -155,7 +213,12 @@
       "category": "student",
       "status": "active",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students",
+      "profileTitle": "Thuy Luyen Thanh, BSc",
+      "bio": "Luyen Thanh Thuy has been studying Computer Science at Phenikaa University since 2022. She joined ICSLab in November 2024. She is particularly interested in artificial intelligence and data analysis. At ICSLab, she has been involved in several research projects focusing on deep learning applications. Thuy is also an active member of student-led tech communities, where she shares knowledge and collaborates on coding projects.",
+      "email": "22010163@st.phenikaa-uni.edu.vn",
+      "image": "assets/people/thuy-luyen-thanh.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQXlTu5CNBKNIyC9j9_cjgpAwmVdhms89iyp7FNI1-d3A_BqFHuw894q7Kov9YGxUKWHlBvK-I2eSgpdQJ0cKdyG11MZVA5XUUpC7u11xcTdA2h7Br6LYwNoUigYuZlT43JevcUrtxFrThZddaoABrHgeDUGvSWXmvZZLvmE89zMfAVG-MU6HsqIvCkOOov0-fy1J6EcVxc4G4YWQCUnzZjaPYMumca2WgMgVH9t=w1280"
     },
     {
       "id": "ba-long-nguyen",
@@ -166,7 +229,12 @@
       "category": "student",
       "status": "active",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students",
+      "profileTitle": "Ba Long Nguyen , Eng",
+      "bio": "Ba Long Nguyen is majoring in Control and Automation Engineering at Phenikaa University since 2022. In 2024, he joined ICSLab, where he focuses on studying and researching Non-Destructive Testing (NDT), particularly in the design and simulation of advanced sensing systems.",
+      "email": "22011049@st.phenikaa-uni.edu.vn",
+      "image": "assets/people/ba-long-nguyen.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQWRTwn-ZxAzei3GHAvveGm6wHwiJH5CzXW-6ksI5U9Z3jEu2pT9RGPGF-5XgOUV4QIdrknwODUfGU5o24EcudILi2r2uJEHdLKNCPNR9w-hiRu_bgpQF-OgKi-C-EPCFEPEEntw3lUowVdII9Klf4xKiQM2IoUs90grnCGcCgwDRMHY8eT7PmawkaHDHwK6-IYB045PH45zbxmZswREX6DqTbabf-wNFzl-8VH6qlk=w1280"
     },
     {
       "id": "quan-nguyen-hoang",
@@ -177,7 +245,12 @@
       "category": "student",
       "status": "active",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students",
+      "profileTitle": "Quan Nguyen Hoang , Eng",
+      "bio": "Nguyen Hoang Quan is student in Artificial Intelligence and Robotics Engineering at Phenikaa University. He joined a research laboratory in 2025 and his research focuses on advanced computational models.",
+      "email": "22014500@st.phenikaa-uni.edu.vn",
+      "image": "assets/people/quan-nguyen-hoang.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQU8xb6SlDIP1eOJq9md4SS8NCnAIPMQT829rLGEqgLZNclo4YdfvX6R9zg1Znd4jjvGPHZxCQhu1SFappkjesiGXlmAGxWIxipxPAI80Oq6WjSp4MNcCma4gEgxznQd9M6ze6DZcZJeXweqWaKaogMUKal6MVndwgKNTNIoDrd0cElYEjotHdUeyfvqjtrgHMsU5hSdj5NeSFW_EH-zb2choR5JGg0NY8EmtzqPO9w=w1280"
     },
     {
       "id": "quang-huy-nguyen",
@@ -188,7 +261,12 @@
       "category": "student",
       "status": "active",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students",
+      "profileTitle": "Quang Huy Nguyen, Eng",
+      "bio": "Quang Huy Nguyen is a student majoring in Control and Automation Engineering at Phenikaa University. He joined in 2025 and is currently researching NDT systems.",
+      "email": "23011006@st.phenikaa-uni.edu.vn",
+      "image": "assets/people/quang-huy-nguyen.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQWMAZ9X93Oxqnx7zLC6qGn76UTJGpv4t8T7IKENLY4w1DMEWm3V_Xi9FrQaVawMRnhPU2_Crg_l42QfO8OveoHQPQdIrX-lREHQtUmVpMBhkIHun5aQet-h4Ysvg92n4RWrDADM7cKy6SicAGhGSiNlCTubM7qsfYvMf2ue5GdBvVaL5aChfkwc5ZHgBK8bev_FcY1GJGUMC6ZCVb2F-0W62cIo0g6bDFKw9-Jn=w1280"
     },
     {
       "id": "hoa-le-duc",
@@ -201,7 +279,12 @@
       "category": "student",
       "status": "active",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students",
+      "profileTitle": "Hoa Le Duc, Eng",
+      "bio": "Hoa Le Duc major in artificial intelligence and robotics, Phenikaa University. Research direction is machine learning, deep learning and LLM .",
+      "email": "22010984@st.phenikaa-uni.edu.vn",
+      "image": "assets/people/hoa-le-duc.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQUIPg2UWV01S__JgXRRvkLyEmzYTUXUE1RWebTRFknbeheJSTG0_HXQy6L7Xf_5VE_EZ3bXgPID26VuWDcbuKl63kBVP24YZj8VpnNmMyqIsQUT6LkCAL0WmETbAHEkF4xQaYAMm7IZDxW9zGbejC7ZmiHXDMkP0tKtXNlyOpeiJ9wyd600azwpaHfB0y2yRsZbj2QOK4ZMLQBxmSHEx1PLCVxV9sq1O1cMIOfeqy8=w1280"
     },
     {
       "id": "bao-tram-pham-vu",
@@ -214,7 +297,12 @@
       "category": "student",
       "status": "active",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students",
+      "profileTitle": "Bao Tram Pham Vu , Eng",
+      "bio": "Bao Tram Pham Vu currently majoring in Artificial Intelligence and Robotics at Phenikaa University",
+      "email": "@st.phenikaa-uni.edu.vn",
+      "image": "assets/people/bao-tram-pham-vu.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQXHssLDcfZae-kfRaM0qvZwH9lWKuq7scPzeFPzsPzk3oWgIxI1XChraq-8bs2XovfhTQv0xJyD9MwGF0ROuuovFrE9eO72Tu8Zd9ky9MAxPpk_k1YyoHjN_lqRg2UuScH50pXI3up37enhn21u3CaE2-N0n5hPPmo5gMfBa7lJe-5qpnG6c9w_TiD2mdCQVXR5W75USuEnT4yIee9ZVUP3wZwlwTeY9PQi1eE-=w1280"
     },
     {
       "id": "khai-van-nguyen",
@@ -227,7 +315,12 @@
       "category": "student",
       "status": "active",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students",
+      "profileTitle": "Khai Van Nguyen , Eng",
+      "bio": "Nguyen Van Khai major in artificial intelligence and robotics, Phenikaa University. Research direction is machine learning, deep learning and computer vision.",
+      "email": "21011003@st.phenikaa-uni.edu.vn",
+      "image": "assets/people/khai-van-nguyen.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQV2cyq3ENWDmF94mq0R83XZRD-l65DHYLpjhJ0L_kigmIKqoU_xTIymk3ELVDXxeOHNz-WKt85udQ9VwxIhHItgv13YXJ8vPnOSw_fAwxUKXKuyUroJX5V03sxoT5jN4NP5DeiVP7deH5RNcRz1wpwe6SbfLI37aT7wKUaVDn6Zqdi6eVWznNKIAA-dBm27aSpV2vPFx3aVMafM3Q2nSFCLoI1337MBeqqmxh_2=w1280"
     },
     {
       "id": "hoang-hau-nguyen",
@@ -238,7 +331,12 @@
       "category": "student",
       "status": "active",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students",
+      "profileTitle": "Hoang Hau Nguyen , Eng",
+      "bio": "Hau Nguyen Hoang currently majoring in Artificial Intelligence and Robotics at Phenikaa University",
+      "email": "@st.phenikaa-uni.edu.vn",
+      "image": "assets/people/hoang-hau-nguyen.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQW9BgJkmLpMouC1Oe9bREimhLc7r7Fuf8_3JbGBfZO2xVzaGQS1wYGzgCXTcPzma3mvSD2tsSZbADmCmxg3nOAw4s9Zv0NalyuEMGlo57WuITNO7LDIhcstAkeLgTig2cCnUptOMStLwoSdzA3b0CeH2kCnJXPlUa7KVjeZHZETrF0nhnHzibfe1bOK=w1280"
     },
     {
       "id": "hieu-trieu-trung",
@@ -250,7 +348,12 @@
       "category": "student",
       "status": "active",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students",
+      "profileTitle": "Hieu Trieu Trung , Eng",
+      "bio": "Hieu Trieu Trung major in Control and Automation Engineering at Phenikaa University . Research",
+      "email": "21011003@st.phenikaa-uni.edu.vn",
+      "image": "assets/people/hieu-trieu-trung.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQXCvrlMQaF-IfZC1tWt6GFF0l88J5w8vCP1LSNR_E-fmOTV4J4kW_wpBswbNVaGe02qqJQNYPVIzaHYe5GYRI8WeZ1qcdt2GTteqj2lzf8a-P_AktAu9ZWQVxEfRZVbc5w3_z48xQZYNTnNqvyyfCER7N4EkLaBKFz5bAH7wxILorvuTXfgOmPzqqEtOx1jZ56wJ9mD4oNJEloOqRwz48B6v1cX-me8k5kMyN3rWMU=w1280"
     },
     {
       "id": "nhat-long-do",
@@ -261,7 +364,12 @@
       "category": "student",
       "status": "active",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students",
+      "profileTitle": "Nhat Long Do , Eng",
+      "bio": "Do Nhat Long have been studying Control and Automation Engineering at Phenikaa University since 2022. In 2024, he joined ICSLab, where he research on Nondestructive testing",
+      "email": "22010516@st.phenikaa-uni.edu.vn",
+      "image": "assets/people/nhat-long-do.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQXsrkoK6o5OO-Ye7glv34-xXzh_rKVHgM0fEYlfhBs68xgCJj3X0QwhVmVheSMnBcINptQqGOmeIuIon6siBzN1rsOCQ60vFyoKLb3-df-FGSNTA6H1L39joWLHvpbupAd2vZko-wvKotFNEUNZyTZgBu_OSTi3J7dJObFYUW2Q2Y5Ur0hA4twjXCOfZPVIuKiZETypZPTgfft26zE7jXiLYq34VtpNTQFn6oYm0wc=w1280"
     },
     {
       "id": "dinh-hieu-nguyen",
@@ -272,7 +380,12 @@
       "category": "student",
       "status": "active",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students",
+      "profileTitle": "Dinh Hieu Nguyen , Eng",
+      "bio": "Dinh Hieu Nguyen major in Control and Automation Engineering at Phenikaa since 2022. In 2024 he join ICSlab, where he study and research on Non-destructive testing",
+      "email": "22011049@st.phenikaa-uni.edu.vn",
+      "image": "assets/people/dinh-hieu-nguyen.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQXwCX6vU220OtrRU0kBIRxsaVaQmevziOboEdChz6hxx7JDmP5UGjqlSlz2M-4a2bfbqI1F4JGxtS71crRKtKkXrJysKByQFhr0pjsyRAYO5w078qMhXN9cOPF4wq0_06SGSsOhkUFiIKaNHCs2v-RPLxA3GdymSGy_gAjQoNv6Y9b014LVc5792rpmpStYDSBYVu-jjnp9CJU9gVXNx3di5iNEVGkYpfeQRapp=w1280"
     },
     {
       "id": "tuan-nguyen-huu",
@@ -284,7 +397,12 @@
       "category": "student",
       "status": "active",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students",
+      "profileTitle": "Tuan Nguyen Huu, Eng",
+      "bio": "Tuan Nguyen Huu major in artificial intelligence and robotics, Phenikaa University. Research direction is machine learning, deep learning",
+      "email": "",
+      "image": "assets/people/tuan-nguyen-huu.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQUFr79IycDhlPQLYcO9FgS0Y2KHlcjCI3v4TDkrlx5iO2igqp4Nng49SSiTz1Zz81g3P9yn7JjN07byttivbX7HcG28_ngkPhFTvU8QyQZHnd-ERH-RaG7Hg-oDGPnZSodtMDx0lV0BnGU1B10ze2o8WaFvGSN87lpgbhkJizyaVnu1p4oPDT8-hnysURmtwTGSnc9kBgSpeJQ07nIFOBusixcZ9FPaf3uDtJ8FXc4=w1280"
     },
     {
       "id": "khoi-do-duc",
@@ -297,7 +415,12 @@
       "category": "student",
       "status": "active",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students",
+      "profileTitle": "Khoi Do Duc, Eng",
+      "bio": "Đỗ Đức Khôi has been studying Control and Automation Engineering in Phenikaa University. He joined ICSLab in November 2024",
+      "email": "23010956@st.phenikaa-uni.edu.vn",
+      "image": "assets/people/khoi-do-duc.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQV_Vly28o4jjc5Rkp72P_lyXAu5QLHBSC6eVoCQrr-eCLKRZDugG6crNU_Jdoke_iXCxX815cQlTGNhrw_1m-UQE_mV6v_TTqAjikIrQBTN3mUZJNpp7iFXHjNQAngZa6ivpBrrsRwlBkYD6xL3TCKvS4lsi1A-krhBRGkHQm4T5hDGJUukDdzsnR0iAivJlNX235wJdhMrBXsCwXHH0HGFD47DX_t0Ki8xTCzZ=w1280"
     },
     {
       "id": "anh-tran-le",
@@ -308,7 +431,12 @@
       "category": "student",
       "status": "active",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students",
+      "profileTitle": "Anh Tran Le, BSc",
+      "bio": "Tran Le Anh has been studying Artificial Intelligence and Data Science at Phenikaa University since 2022. He joined ICSLab in November 2024.",
+      "email": "22010083@st.phenikaa-uni.edu.vn",
+      "image": "assets/people/anh-tran-le.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQV42MCbwWDJNfTEZ6wy7kObLWu4L1D4YDLVrN41YbVas1Rig9LY2ED4xG8JiTIjUpHPhFy676JQFxKHZy5udoLTy-X9kpKiOlFEb7LFfFkPqNuTx1EJyoFUiOUV3CryV4DkBOdCywIOxXfQwX1FnnuuoczjOsTLj3Sf2NsP0yjhhSDhjFGPkDCjm5Nqq1_NehRIh_pnTbYMVh5hVL7GFyD-sOBpzYqGQD2SJrMojJE=w1280"
     },
     {
       "id": "duc-truong-cong",
@@ -321,7 +449,12 @@
       "category": "student",
       "status": "active",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students",
+      "profileTitle": "Duc Truong Cong, BSc",
+      "bio": "Truong Cong Duc has been studying Vietnam-Japan Information Technology at Phenikaa University since 2022. He joined ICSLab in November 2024.",
+      "email": "22014323@st.phenikaa-uni.edu.vn",
+      "image": "assets/people/duc-truong-cong.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQU5MM3XdJII9UD2NuPB9xmWs9IUtCHbTGc1DgmZerqE-YK5Zk0odDe657vvyXcp10zE_EhbKO97VgSZjxnXi3Ut0roAcYpjODtbphbpsUia4BrMDd8r9XMJpEKQliMJWkse9Pzf0h7O1isQYr1ilHE5FFt4VP1gGk0DibPR946sxCQ_0LVMtyxH6WSTQoDTjAc9AIrLgCkFloYot_Bozq396BOX3zJLnPFLeJEm=w1280"
     },
     {
       "id": "quyet-vu-xuan",
@@ -332,7 +465,12 @@
       "category": "student",
       "status": "active",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students",
+      "profileTitle": "Quyet Vu Xuan, Eng",
+      "bio": "Vu Xuan Quyet has been stutying Electronics and telecommunications . He joined ICSlab in Nocember 2024.",
+      "email": "23011920@st.phenikaa-uni.edu.vn",
+      "image": "assets/people/quyet-vu-xuan.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQXHCSLSz_6jADL2-JSYTKzNMaclCINUnAeXd4biqSYYaY-3HZsTikiXjzg1E8LEeVQrNuvEB0rB-Pw5kv7mRr0q48tbEkll8JZ32-pRgPU_-FR-nuExKiqHRc1vDep3lLEX1mDcIo0UKYl1RDkym7IXPzFqS93P64ME31IDKkJ04l8Axqll48IP8iD9iS15D-hZJDqQM1aM6xhDD6oozlJYG7zGSjq1SBFfc1wxjYs=w1280"
     },
     {
       "id": "nga-nguyen-thi-uyen",
@@ -343,7 +481,12 @@
       "category": "student",
       "status": "active",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students",
+      "profileTitle": "Nga Nguyen Thi Uyen, Eng",
+      "bio": "Nguyen Thi Uyen Nga has been stutying Electronics and telecommunications . She joined ICSlab in Nocember 2024.",
+      "email": "23011674@st.pheniaa-uni.edu.vn",
+      "image": "assets/people/nga-nguyen-thi-uyen.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQUsXR27eJkn651cGlKLH5qaNfcfCoz-EN-BWBDsKO1RdWW7JHbAyD7xUCYGVAt0Ccs4uWdG07u3WBuKsg2QUSTqAn2GyfwEwB3RVzE-P2wOJINrKGcf1sD_3xCSf_NRNHy6qeTJWNDvPiDQ0IxeDX19Zs3TgA6NxWO9c4M2Y94QPf3ai_hNAkczfb2V5bZeTK2earTFMi7nsIfF-KWslH-D7wHhwpIkci1vDGNSuhc=w1280"
     },
     {
       "id": "chi-le-lan",
@@ -354,7 +497,12 @@
       "category": "student",
       "status": "active",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students",
+      "profileTitle": "Chi Le Lan, Eng",
+      "bio": "Le Lan Chi has been studying Electronics and Telecommunications. She joined ICSlab in November 2024",
+      "email": "23011993@st.phenikaa-uni.edu.vn",
+      "image": "assets/people/chi-le-lan.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQXCCQu8a06OFQGJ1m7aAF_9Qwy9eC-eDTRzYSwsrhaaScRRYXj3vrhlGHGZvyswA46yVH2MUdHZh2wA8-yAa0FWSiYBnb8aGo-tKjlH0XU3N5xHI6Uf6UccqoVbecjcz335hL4CavJOEbddDZSEzG6EVmxUEsmxBMeau-YPK3OOATmw2GLaGywIdxwgdV8oK34UFdH-7GAaaZSaMgU9HIUgMJaYVvRwh58NL0Fpaw0=w1280"
     },
     {
       "id": "minh-hoang-pham",
@@ -365,7 +513,12 @@
       "category": "student",
       "status": "active",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students",
+      "profileTitle": "Minh Hoang Pham, Eng",
+      "bio": "Minh Hoang Pham has been studying Electronics and Telecommunications. He joined ICSlab in November 2024",
+      "email": "22010269@st.phenikaa-uni.edu.vn",
+      "image": "assets/people/minh-hoang-pham.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQWFbj6VoYJBah8wt8UN72BP0InAHjQb-nX7cHamfAEKY5VLAFdB7T6ktD-m7QktWtbKD7nWEyenx2dkNA7yEwO2P6F362QozkP2KLBDUaY7Xo69I3ZVjOx2wjvTLQOFK1lvAMEYRrLJ83-g5Ezm18viB8gNLb1l14ZCVIi5LKSWUYKLnOgJsH4Ysqkk2tEW5l14TdNY5iHsVeXGvKzZk0PfbxWb-I-1WKz5zTR9=w1280"
     },
     {
       "id": "thanh-dat-ly",
@@ -377,7 +530,12 @@
       "category": "student",
       "status": "active",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students",
+      "profileTitle": "Thanh Dat Ly, Bsc",
+      "bio": "Thanh Dat Ly major in Computer Science at Phenikaa University since 2023. Research direction is machine learning, deep learning and computer vision.",
+      "email": "23010879@st.phenikaa-uni.edu.vn",
+      "image": "assets/people/thanh-dat-ly.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQXwn3f3vaYHE8zzVXI7fYpLoGh1X_aQt0o1BDe0umR6BxKw20VG8L1e71JO6cD2Fu6dks4lzfnfskoBYxKtgGGsfmZP5xUEtF2vCWMU5FpXFG9wdlkarNeGmPBTCjFmiSO42Zht1PUIcUh3QL7Dg_Q0IoYuSXlFob_Kv7aylPlJuICHyC_ZvkZjuxg5-oORFTjmp-pUiMJYLDc5M9kWZPm8o50b-9j_qUmRH1GeVIw=w1280"
     },
     {
       "id": "kim-sam-le",
@@ -388,7 +546,12 @@
       "category": "student",
       "status": "active",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students",
+      "profileTitle": "Kim Sam Le , Eng",
+      "bio": "Kim Sam Le major in artificial intelligence and robotics, Phenikaa University. Research direction is machine learning, deep learning and Radar .",
+      "email": "251010412489@st.phenikaa-uni.edu.vn",
+      "image": "assets/people/kim-sam-le.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQUzgOVbUxeHzyqZSLx5T3DRX-Incht7K3f2K0zXR9IJCOyXcK4lXCQg_wsQQLztVa4idHVuYukQaj1NiMXagTGQIk8E0Fa_fo_PmkXJ9fYvwzP4stXwaHCMW5mTBMt2kXPr8BofWoffnOMUx8J_OdKJLpbv3kMcYxCTA_8nVR6RglrZ21-Df9XmI81fxyFXNlAxV0R6EiQcWRLywetkIIxeWtPd2laCanVMXPjnGsI=w1280"
     },
     {
       "id": "xuan-hieu-nguyen",
@@ -399,7 +562,12 @@
       "category": "student",
       "status": "active",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students",
+      "profileTitle": "Xuan Hieu Nguyen, Eng",
+      "bio": "Nguyen Xuan Hieu has focused my academic career on Electronics and Telecommunications with a deep dive into Semiconductor IC Design. Furthermore, I have participated in ICSLab since September 2024, where I have gained valuable hands-on experience",
+      "email": "24100755@st.phenikaa-uni.edu.vn",
+      "image": "assets/people/xuan-hieu-nguyen.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQWHyxgoW__9wvVCZ7JN_CIAPLiEfAtv7Wx-GdbuahTy4ehvoA9VysGk6i54UMDbNq4NqNmH_LLh693ZRDGdfHQmh-TGOp_CPh90OmZHIuiITS3IfOwUTAgj04R5qCB1XbWCeHJ4Qz78OD5tSsCvRN2c6UxdjRjIIMG2bFXE1XBsqA4iLtQsdQxQQAX7sDHzFT2JypRZ0deP22MGBoFM13S3tMeOFIJJJtEOUxSkVHM=w1280"
     },
     {
       "id": "huu-thuan-vo",
@@ -410,7 +578,12 @@
       "category": "student",
       "status": "active",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students",
+      "profileTitle": "Huu Thuan Vo , BSc",
+      "bio": "",
+      "email": "@st.phenikaa-uni.edu.vn",
+      "image": "assets/people/huu-thuan-vo.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQWxqWHq_BA4hOoxy9aTyI3PVM15KDY_G_FWMWCcTZZN6xoA3ya3cy5SXbKrH72pr2crfeecIH9o5GI11VYWO_tdsevtIqyc2to3Ap_O5XIQuEyiYLtp6zyQQjV7lrDZQhC9Srt5jGppXJwXopivqRDJeO_xlU0Lc3XNcig0xsjiI0BhabZsbiJLYLCQXqmAJ9KdBtAO42RzWGrwkQ8apUQq2QN1x20Fgl9JsufdpRE=w1280"
     },
     {
       "id": "hung-chau-tien",
@@ -421,7 +594,12 @@
       "category": "student",
       "status": "active",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students",
+      "profileTitle": "Hung Chau Tien , Eng",
+      "bio": "",
+      "email": "@st.phenikaa-uni.edu.vn",
+      "image": "assets/people/hung-chau-tien.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQXGPtrndEJiWxGRi80t_BdZHzTwvH2WAR-8Q05JNym-1C6T9PGr3st7EFghH9J014VW6zSDUK6Uuix_paYhg37_pmtrlJ8rkLxV0xUsDSf9y57sXZpmMJML24bs60QX3MeONBMOQSDV9ABTFYEskJ76TfKuXKAERIv-RJbsh4Uk2EBrzNBzlWeQHPdlE8IbHDnUueYlO5zd2xByzn3xDxrJNlsMLa_kym_qbvCnIEk=w1280"
     },
     {
       "id": "ninh-vu-thi-thuy",
@@ -432,7 +610,12 @@
       "category": "student",
       "status": "active",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students",
+      "profileTitle": "Ninh Vu Thi Thuy , Eng",
+      "bio": "",
+      "email": "@st.phenikaa-uni.edu.vn",
+      "image": "assets/people/ninh-vu-thi-thuy.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQXvVOql57IcjqXSld-suroVJAyfxQr8DsyT4kFC23H_Tcnhmv42X2pCubuOFq7t0pMYwfcBvYfHWsnPn7H52vQW_eOt2bIa9cAKgcMOWF_sskoTAd4Gtpq-pYEIiP4uEhyWBF7s4wyCiXwJGc7d5x6UgxHftBi2Rn36wb7dTzm363a1bKDPQYowMtzHSZWLlZIB4s82c5immKyqmpWaJo6Ncn0DYgZnTNsmM--i=w1280"
     },
     {
       "id": "dat-nguyen-thanh",
@@ -443,7 +626,12 @@
       "category": "student",
       "status": "active",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students",
+      "profileTitle": "Dat Nguyen Thanh , Eng",
+      "bio": "",
+      "email": "@st.phenikaa-uni.edu.vn",
+      "image": "assets/people/dat-nguyen-thanh.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQVLSzNISgV2DO_PFuftw7RibTtZrhM1fbHMkmVyhrCcf6dFveoLagIc3nAlSxt3CAmxLBIC98-Jjiw2UKfylcQQ1_b4mM9i9kRagOrR2ni2HZw41qTWJXobX9Vf1S28RRcyqpvmJZIAGYSck9YZ1jm_f2OTgF7UyIu5DiklQaegtL483br5fGZ2znLW9ibAcNmdnBUQVci_YtQuG4QEeHr0ubQatwV549mWDddf=w1280"
     },
     {
       "id": "trung-nguyen-quang",
@@ -454,7 +642,12 @@
       "category": "student",
       "status": "active",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students",
+      "profileTitle": "Trung Nguyen Quang , Eng",
+      "bio": "",
+      "email": "@st.phenikaa-uni.edu.vn",
+      "image": "assets/people/trung-nguyen-quang.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQVTROkO49X8zVMCx3QrGIN_lNImfQlz-VyR_N3SVnCRtRTcwXEPupmOVoxY8AWTMslIcz2ejgj9Za8v53XjIyZorQKVDuYzjXDO8--r01mTv1jc8APIy6ViOnVeF1d_FSStBFf1BNW2h8QkVMJz-Z2JQ9IE7ZFvei26b2QbvvuUeqV25Xy3dWvrbHTE_bDhEDCZpfbFtVdQ_XWwwipjK5fljvyTR6UMdAFKGvi3M24=w1280"
     },
     {
       "id": "ngoc-pham-minh-dang",
@@ -465,7 +658,12 @@
       "category": "student",
       "status": "active",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students",
+      "profileTitle": "Ngoc Pham Minh Dang , Eng",
+      "bio": "",
+      "email": "@st.phenikaa-uni.edu.vn",
+      "image": "assets/people/ngoc-pham-minh-dang.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQXDf_h_6qHRbUvKo0PjpxRbBXEB6ErFccxC9zc7L8QHHP05c_1LLktaPNdtPXcezwAt4yVgScYUD5CISMekeznHZUocs7S8Is0gZElIGz-W0Mp0y7XdfrqssOgSAjBAcvMwhTIU9Ps1KKNuFVcjPy2N6agCCFFXKTmNSXF6cGS6hG-GtDQKGi3KyQxSJGO7fGrRMPmFrtY9eZUchozvyNw8-1HTVeesAEArh1dg=w1280"
     },
     {
       "id": "tu-doan-manh",
@@ -476,7 +674,12 @@
       "category": "student",
       "status": "active",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/students",
+      "profileTitle": "Tu Doan Manh , Eng",
+      "bio": "",
+      "email": "@st.phenikaa-uni.edu.vn",
+      "image": "assets/people/tu-doan-manh.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQVJKCDPrXBLhv9HuxB8_5m73yRSU3KPafzy9c1gDYozNUgGl6HHwJx4fcyOV1ehOQ3mvf5RSmTRi3ikAlWDGKPhpxOZ5KPwppH0M8XaVu-zlHm806WdSWlw2JMa76Ngkeh3NBXjUBZ-_mKwUOWsCTTUIq1tm2b52eoz6SLaLxxoimdvhiCi9PmQLC573U2I-WjertErhO87j0OtL_VZH1k2F-XOngsIp-bFR-fYZrU=w1280"
     },
     {
       "id": "thuong-pham-cong",
@@ -489,7 +692,12 @@
       "category": "alumni",
       "status": "alumni",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/alumni"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/alumni",
+      "profileTitle": "Thuong Pham Cong, RA",
+      "bio": "Mr. Thuong Pham Cong received a BSc degree in Mechatronics Engineering at Hanoi University of Science and Technology, Vietnam in 2018. He is in the top rank of his graduated class (6/52). He worked for ABB Robotics from 2018-2019 and joined various training/development projects. Since 2019, He is working for ICSLab, Phenikaa University as a full-time Research Assistant. His interests are robotics, artificial intelligence, and electronics circuits .",
+      "email": "thuongpham311@gmail.com",
+      "image": "assets/people/thuong-pham-cong.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQWqFNBKt24lhHdtv6_Rl4oGH27qbTPQjxtxhg2WJ7qyjuJiiBQu6uCLQ7h4eY66FzJb_bhERL7pKgD5N0_zGBr4BJl31sebQ7E9rUcG6lIHjiK5IiJgLZje3PeAcyyjL67oe_4-Z119oxlWNavpBMjT8pBJTiXYVD6Sm0ORKaT8PUROhx8qEVfqMDuYs5g427tRY8EdrAhduc1rdaM=w1280"
     },
     {
       "id": "duc-minh-le",
@@ -500,7 +708,12 @@
       "category": "alumni",
       "status": "alumni",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/alumni"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/alumni",
+      "profileTitle": "Duc Minh Le, Eng",
+      "bio": "Duc Minh Le is studying Control and Automation Engineering at Phenikaa University since 2020 and joined ICSLab in 2021. The main research direction is Non-destructive testing, embedded programming and comsol simulation.",
+      "email": "20010707@st.phenikaa-uni.edu.vn",
+      "image": "assets/people/duc-minh-le.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQUL1zJ5VhawZ-7-UD0CgEfyBmAwHJGZuL0c6f_ucOJ57-vtjhSw3LYbCEJvX5tKgilwSp9BRxgeHDys2XugyPA8syiKpLXpTqFmyAVJ7pHOyeZktBdOvafjQU41_Fx1VOqTu3rruir55NGpGsdTH87SMLRmzKvAzJiBqiCOyzBetEDRfFT4w3JHrusyR6k=w1280"
     },
     {
       "id": "vu-hien-pham",
@@ -514,7 +727,12 @@
       "category": "alumni",
       "status": "alumni",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/alumni"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/alumni",
+      "profileTitle": "Vu Hien Pham, Eng",
+      "bio": "Vu Hien Pham studied at Ngo Quyen high school, now he is studying Artificial Intelligence and Robotics at Phenikaa University. His research interests are artificial intelligence, big data, and robotics .",
+      "email": "phamhien6388@gmail.com",
+      "image": "assets/people/vu-hien-pham.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQXn2G7iXJoNSulJJHxkZcQBYmGZWSF7lRCn45Xob0UDPaMsUuLDqGYYcZA1psVWIMcQ4DozlD2M2XVR6Aj3Y42LajrDbr_LSI1-Rko8bZki8Y874Yyip_wdgvoDdvn0mtJySsAvVmyNeNuGlutOpsHMukbfb2lQek80qvQDnE3--yY0FtaY_n7L25FYz_gl-OSXEL0iWhWGsH0s9GRrdvGNOtaxe2BUKiap4tVRzr4=w1280"
     },
     {
       "id": "manh-duy-ngo",
@@ -527,7 +745,12 @@
       "category": "alumni",
       "status": "alumni",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/alumni"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/alumni",
+      "profileTitle": "Manh Duy Ngo, Eng",
+      "bio": "Manh Duy Ngo graduated from High school of Education and Sciences. His current majority is in Artificial Intelligence and Robotics at Phenikaa University. His interest is artificial Intelligence , robots , and gesture recognition .",
+      "email": "ngomanhduy098@gmail.com",
+      "image": "assets/people/manh-duy-ngo.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQXUF_6j_LEaL6Jxh2kBRddPguvJ97xzp2uusqhDdQ8ZDIF1V_7K7nsNe01vZ2scoQhdtpZ6aSNNpc92D0QuOHzCa2kgBMxZlMgddqPayq7VNTp5s_i0uozPLdc19Laiq-IRW_BCMVk8spdzjGZMv-A81y1pnh_WXHxQAOviDCKiMVz2tq5wq2_hbgb4KBZ13yyoAj6JZOA_ritOy1M-IUWpHnTHFymkz7CcjySD=w1280"
     },
     {
       "id": "le-hoang-cong",
@@ -540,7 +763,12 @@
       "category": "alumni",
       "status": "alumni",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/alumni"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/alumni",
+      "profileTitle": "Le Hoang Cong, RA",
+      "bio": "Le Hoang Cong graduated with a distinction degree in software engineering from Ho Chi Minh City University of Technology and Education. Now, he is a research assistant at Phenikaa University in software , machine learning , and deep learning .",
+      "email": "Lehoangcongk16spkt@gmail.com",
+      "image": "assets/people/le-hoang-cong.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQVOhYvtZT2XYyZ3HFI-2dEiL4dv-VQyZ9vLdTr2nYEGSYMj9MfiiAjjRl8k2I8jdB0ONYk0OKk5UpIcEa2fMueu9SpxR4PKzr3FXifISTkA6mEPKPN7mj2BlCRXwkdVeEbzw8Kp_VX9WrRQ8qIPaMDXxSbrKJircSdhAGQTqBl6OEcpP9nPxGOgVPZdhklOYmdPP2DV6lIPUaVuk3ljiUuvlG49jDuv82yf6sJl=w1280"
     },
     {
       "id": "sy-phuong-hoang",
@@ -551,7 +779,12 @@
       "category": "alumni",
       "status": "alumni",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/alumni"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/alumni",
+      "profileTitle": "Sy Phuong Hoang, Eng, RA",
+      "bio": "Sy Phuong Hoang began his studies in Controlling and Automation Engineering at Phenikaa University in 2020. In 2021, He joined Key Laboratory of Intelligence Communication System, Phenikaa University and worked as research student on the topic of Non-Destructive Testing (NDT) and artificial intelligence applications.",
+      "email": "20010679@st.phenikaa-uni.edu.vn",
+      "image": "assets/people/sy-phuong-hoang.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQVg8ZuEOF8evWee33z1s2pfv2LkKvw5t2h3Q4LNV5ODnbv_5ysC-rmPrDpe19h2OrNSGWjtQevsVtCD5QG_LD_E-XOBz37wfwnCgyz-Pl3W_Crpu3IQyXUGqdd_kwmaABgEiDf1YLe9kfgbSHVi6P7O1ArxqpM-uUaHIDMpWSL17JyYTkvgoWGB9vNVfnoOmhhm6JQmYB_I7rIn43T0M0qJvRXCZDl_Obtn_928=w1280"
     },
     {
       "id": "hoai-dung-tran-thi",
@@ -565,7 +798,12 @@
       "category": "alumni",
       "status": "alumni",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/alumni"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/alumni",
+      "profileTitle": "Msc. Hoai Dung Tran Thi, RA",
+      "bio": "Hoai Dung Tran Thi received Bachelor's degree in Physics at Quynhon University, Vietnam in 2017. She got Master's degree in Materials Science and Engineering at Hanoi University of Science and Technology, Vietnam in 2019. From April 2023, she is a research assitant at ICSLab, Faculty of Electrical and Electronic Engineering, Phenikaa University, Vietnam. She is researching about Non-Destructive Testing",
+      "email": "dung.tranthihoai@phenikaa-uni.edu.vn",
+      "image": "assets/people/hoai-dung-tran-thi.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQVcWh7Etvuprq6m3TKH91hs6JQMP7vLQ6BHA7vKFzP3JMqtlS_H6cOoWzkFZ0OsbAaAVhFgIn88mruO0WmCm_nmRJDo60ICet2zvlbvRxQ5tyCLcRa_JVnUgmKVJsGSNMIRsc53-8rgJ26o3aTxMnI9Kkc1b8RQGWgSc_Gkk6SL7PcgbNsTVFkAa3JQNl8VFAfsGoN46A43DHAL3ibWTfN1GcKWQJXSBsEQTJRRVpM=w1280"
     },
     {
       "id": "tuan-kiet-tran-mach",
@@ -576,7 +814,12 @@
       "category": "alumni",
       "status": "alumni",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/alumni"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/alumni",
+      "profileTitle": "Tuan Kiet Tran Mach",
+      "bio": "",
+      "email": "kiet.tranmachtuan@phenikaa-uni.edu.vn",
+      "image": "assets/people/tuan-kiet-tran-mach.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQV04Coi1YBqSsq8DvjYA4zxUniZyhU1M43eXFWSwvyiF3IpdBsSmOAVyj75S5oUbky50eZo8ogqmIwFlloMhSd0c7MuLwEHgFO8MmZ1AHZXdxsOvbq2_DMSsyqyXFLDSjjbR4Pn74SAuQKHx7bY5wo1L8ycHywhUWSMP7vvmxxQ-1m7DdkDPcZhb_pR-42Y4-FIhRMxodyN0MqcHwkw2wUP7SQulGtE3xAOkfg1=w1280"
     },
     {
       "id": "huu-trung-nguyen",
@@ -589,7 +832,29 @@
       "category": "alumni",
       "status": "alumni",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/alumni"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/alumni",
+      "profileTitle": "Huu Trung Nguyen, RA",
+      "bio": "Huu Trung Nguyen received Bachelor's degree in Software Engineering in Information System at FPT University in 2020",
+      "email": "trung.nguyenhuu@phenikaa-uni.edu.vn",
+      "image": "assets/people/huu-trung-nguyen.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQW0SwQKEOErt-aAyGwTJz7H8H-6vnxKbddw1f44l8qJhbJcgw7M9Vj5ppAbCnzv7vfAZ9kNaItUe-2lGBM3pUzRPJfCZHvCyImEsQjJk2ZmOaTLzgC5u17K6dHNbw47-HPA_qGnblDX_LUSJidEYQhPLJ3LyCa-P_6Ulih_0MNRcKKCqc6KR_Im4Gdw3odgaqvFoClMmNlGsGOqKLaxK-9blbsZtA8ixpK2_SFiNj8=w1280"
+    },
+    {
+      "id": "van-dinh-dung",
+      "displayName": "Van Dinh Dung",
+      "aliases": [
+        "Van Dinh Dung",
+        "Dung Van Dinh"
+      ],
+      "category": "alumni",
+      "status": "alumni",
+      "highlightInPublications": true,
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/alumni",
+      "profileTitle": "Van Dinh Dung, RA",
+      "bio": "Van Dinh Dung Currently pursuing an MSc in Artificial Intelligence Systems at Trento University, his research interests lie in artificial intelligence and robotics. His guiding motto is: \"Every difficulty adds extra brilliance to success.\"",
+      "email": "",
+      "image": "assets/people/van-dinh-dung.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQUmDygC9CBTtNa2xrtNobyVj3OQrWy3u65vswfISG6nuWUJ2Wb5ojWBDlYkYgByRVVfQ5fo0428Tr1qizSv-KpRYh786PWIrgxH_uSYXKFTXy7dSa_fNGIztug7mFpcdKwiPz-DQs1GzAMeOgln6AvZl9GX9bUoX5UnnN-wRX_9YDsBTaBUgBjjryy-IBYsK9rjur7lhgM6YJs8B35Q0V6P1Byi8D9U5xIac6cdlNA=w1280"
     },
     {
       "id": "dang-khoa-nguyen",
@@ -604,7 +869,12 @@
       "category": "alumni",
       "status": "alumni",
       "highlightInPublications": true,
-      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/alumni"
+      "profileUrl": "https://icslab.phenikaa-uni.edu.vn/members/alumni",
+      "profileTitle": "Dr. Dang Khoa Nguyen, Ph.D",
+      "bio": "Dr. Dang Khoa Nguyen - Ph.D. in Aerospace Engineering from Ulsan University, South Korea in 2018. Since 2019, he has been working at the Department of Electrical and Electronics Engineering, Phenikaa University. His research interests lie in system modeling, control systems, unmanned aerial vehicles (UAVs), and robotics",
+      "email": "",
+      "image": "assets/people/dang-khoa-nguyen.webp",
+      "sourceImageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQXhn25jxucDs4X63A4BF_vd7mo0iu03yr9GXZPE4-vg16PkVg-5chCFA2BPy7Yl1BolmtMuPeBGVqTulg4qYdZa5tWpwA570hQmdW4wYSvC1eK_NCz_R6_q0-VNkqzanjNVoPb2o9pWIDLzYBp9CXjJd4_re-gTQQR0maknOgBFEr_Ke8INt_gP-tX-Rr1LfVLrGLkueFP_VU4XAhd8we7iDOPehOKXehXwS0Li=w1280"
     }
   ]
 }

@@ -5,22 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Domestic publication archive for ICSLab at Phenikaa University."
+      content="Meet the professors, PhD researchers, research assistants, students, and alumni of ICSLab at Phenikaa University."
     />
     <meta name="theme-color" content="#0a2858" />
-    <meta property="og:title" content="Domestic Publications | ICSLab" />
+    <meta property="og:title" content="People | ICSLab" />
+    <meta
+      property="og:description"
+      content="Profiles and contact information for the ICSLab research team."
+    />
     <meta property="og:type" content="website" />
     <meta
       property="og:url"
-      content="https://ics-lab-research.github.io/icslab-website/domestic-publications.html"
+      content="https://ics-lab-research.github.io/icslab-website/people.html"
     />
-    <title>Domestic Publications | ICSLab</title>
+    <title>People | ICSLab</title>
     <link
       rel="canonical"
-      href="https://ics-lab-research.github.io/icslab-website/domestic-publications.html"
+      href="https://ics-lab-research.github.io/icslab-website/people.html"
     />
     <link rel="stylesheet" href="styles/styles.css" />
     <script src="scripts/script.js" defer></script>
+    <script src="scripts/people.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -47,10 +52,10 @@
         <nav class="site-nav" id="site-navigation" aria-label="Main navigation" data-menu>
           <a href="index.html#about">About</a>
           <a href="index.html#research">Research</a>
-          <a href="publications.html" aria-current="page">Publications</a>
+          <a href="publications.html">Publications</a>
           <a href="conferences.html">Conferences</a>
           <a href="news.html">News</a>
-          <a href="people.html">People</a>
+          <a href="people.html" aria-current="page">People</a>
           <a class="nav-cta" href="index.html#join">Join us</a>
         </nav>
       </div>
@@ -59,31 +64,40 @@
     <main id="main-content">
       <section class="page-hero" id="top">
         <div class="container page-hero-copy">
-          <p class="section-kicker">Research output</p>
-          <h1>Domestic publications.</h1>
-          <p>This page is ready for verified domestic publication data.</p>
+          <p class="section-kicker">People</p>
+          <h1>Researchers building intelligent sensing systems.</h1>
+          <p>
+            Explore <strong data-people-total>51</strong> public profiles across
+            faculty, doctoral researchers, engineers, students, and alumni.
+          </p>
         </div>
       </section>
 
-      <nav class="publication-tabs" aria-label="Publication categories">
+      <nav class="people-tabs" aria-label="People categories">
         <div class="container">
-          <a href="publications.html">International</a>
-          <a href="domestic-publications.html" aria-current="page">Domestic</a>
+          <a href="people.html?group=professors#directory" data-people-tab="professors">Professors</a>
+          <a href="people.html?group=phd#directory" data-people-tab="phd">PhD</a>
+          <a href="people.html?group=research-assistant#directory" data-people-tab="research-assistant">Research Assistants</a>
+          <a href="people.html?group=students#directory" data-people-tab="students">Students</a>
+          <a href="people.html?group=alumni#directory" data-people-tab="alumni">Alumni</a>
         </div>
       </nav>
 
-      <section class="section publication-archive-section">
+      <section class="section people-directory-section" id="directory" aria-labelledby="people-directory-title">
         <div class="container">
-          <div class="empty-publication-state">
-            <p class="section-kicker">Data unavailable</p>
-            <h2>Domestic records have not been imported.</h2>
+          <div class="people-directory-heading">
+            <div>
+              <p class="section-kicker" data-people-kicker>Professors</p>
+              <h2 id="people-directory-title" data-people-title>Faculty and key members.</h2>
+            </div>
             <p>
-              The previous domestic publication source is unavailable, so no
-              unverified records are shown here.
+              <strong data-people-count>4</strong> profiles. Source refreshed
+              <time datetime="2026-08-26">2026-08-26</time>.
             </p>
-            <a class="button button-primary" href="publications.html">
-              Browse international publications
-            </a>
+          </div>
+
+          <div class="people-directory" data-people-directory aria-live="polite" aria-busy="true">
+            <p class="publication-loading">Loading people…</p>
           </div>
         </div>
       </section>

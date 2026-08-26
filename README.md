@@ -56,6 +56,7 @@ domain in GitHub **Settings → Pages**, then update DNS.
 - Publication page structure: `publications.html`
 - News page structure: `news.html`
 - Domestic publication placeholder: `domestic-publications.html`
+- Conference watchlist: `conferences.html`
 - Design: `styles/styles.css`
 - Mobile navigation: `scripts/script.js`
 - Publication rendering: `scripts/publications.js`

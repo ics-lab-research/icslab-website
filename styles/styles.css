@@ -769,7 +769,8 @@ a {
   font-size: 1.08rem;
 }
 
-.publication-tabs {
+.publication-tabs,
+.people-tabs {
   position: sticky;
   z-index: 20;
   top: 78px;
@@ -777,24 +778,29 @@ a {
   border-bottom: 1px solid var(--line);
 }
 
-.publication-tabs .container {
+.publication-tabs .container,
+.people-tabs .container {
   display: flex;
   gap: 34px;
 }
 
-.publication-tabs a {
+.publication-tabs a,
+.people-tabs a {
   position: relative;
   padding: 19px 0 17px;
   color: var(--muted);
   font-size: 0.86rem;
   font-weight: 800;
+  white-space: nowrap;
 }
 
-.publication-tabs a[aria-current="page"] {
+.publication-tabs a[aria-current="page"],
+.people-tabs a[aria-current="page"] {
   color: var(--navy);
 }
 
-.publication-tabs a[aria-current="page"]::after {
+.publication-tabs a[aria-current="page"]::after,
+.people-tabs a[aria-current="page"]::after {
   position: absolute;
   content: "";
   right: 0;
@@ -914,6 +920,258 @@ a {
   max-width: 600px;
   margin: 0 0 28px;
   color: var(--muted);
+}
+
+.conference-hero {
+  background:
+    radial-gradient(circle at 82% 22%, rgba(255, 90, 31, 0.2), transparent 26%),
+    radial-gradient(circle at 70% 70%, rgba(53, 120, 255, 0.2), transparent 30%),
+    var(--navy-deep);
+}
+
+.conference-tabs {
+  position: sticky;
+  z-index: 20;
+  top: 78px;
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+}
+
+.conference-tabs .container {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+}
+
+.conference-tabs a {
+  flex: 0 0 auto;
+  padding: 19px 0 17px;
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.conference-tabs a:hover,
+.conference-tabs a:focus-visible {
+  color: var(--orange);
+}
+
+.conference-section {
+  background: var(--surface);
+}
+
+.conference-summary {
+  display: grid;
+  grid-template-columns: 1fr 0.72fr;
+  gap: 60px;
+  align-items: end;
+}
+
+.conference-summary h2 {
+  max-width: 760px;
+  margin: 12px 0 0;
+  font-size: clamp(2.1rem, 4vw, 3.7rem);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.conference-summary > p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.conference-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 56px 0 92px;
+  background: var(--navy);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.conference-stats div {
+  padding: 28px 32px;
+}
+
+.conference-stats div + div {
+  border-left: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.conference-stats dt {
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: 850;
+  line-height: 1;
+}
+
+.conference-stats dd {
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.76rem;
+  font-weight: 750;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.conference-timeline {
+  display: grid;
+  gap: 96px;
+}
+
+.conference-period {
+  scroll-margin-top: 158px;
+}
+
+.conference-period-heading {
+  max-width: 760px;
+  margin-bottom: 38px;
+}
+
+.conference-period-heading h2 {
+  margin: 10px 0 12px;
+  font-size: clamp(2rem, 4vw, 3.35rem);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.conference-period-heading > p:last-child {
+  margin: 0;
+  color: var(--muted);
+}
+
+.conference-cards {
+  position: relative;
+  display: grid;
+  gap: 22px;
+  padding-left: 48px;
+}
+
+.conference-cards::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 13px;
+  width: 2px;
+  background: var(--line);
+}
+
+.conference-card {
+  position: relative;
+  padding: 30px 34px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+.conference-card::before {
+  position: absolute;
+  content: "";
+  top: 35px;
+  left: -42px;
+  width: 12px;
+  height: 12px;
+  background: var(--blue);
+  border: 5px solid var(--surface);
+  border-radius: 50%;
+  box-sizing: content-box;
+}
+
+.conference-card-urgent {
+  border-color: rgba(255, 90, 31, 0.5);
+  box-shadow: 0 18px 50px rgba(255, 90, 31, 0.1);
+}
+
+.conference-card-urgent::before {
+  background: var(--orange);
+}
+
+.conference-card-past::before {
+  background: #8b97a8;
+}
+
+.conference-card-watch::before {
+  background: var(--navy);
+}
+
+.conference-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px 24px;
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.conference-status {
+  color: var(--blue);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.conference-card-urgent .conference-status {
+  color: var(--orange);
+}
+
+.conference-card-past .conference-status {
+  color: #6f7c8d;
+}
+
+.conference-card h3 {
+  max-width: 930px;
+  margin: 15px 0 8px;
+  font-size: clamp(1.25rem, 2.3vw, 1.75rem);
+  line-height: 1.28;
+  letter-spacing: -0.025em;
+}
+
+.conference-name,
+.conference-note {
+  max-width: 860px;
+  margin: 0 0 18px;
+  color: var(--muted);
+}
+
+.conference-note {
+  font-size: 0.9rem;
+}
+
+.conference-card dl {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 34px;
+  margin: 20px 0 0;
+}
+
+.conference-card dl div {
+  display: flex;
+  gap: 8px;
+}
+
+.conference-card dt {
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 750;
+}
+
+.conference-card dd {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 850;
+}
+
+.conference-card > a {
+  display: inline-block;
+  margin-top: 22px;
+  color: var(--blue);
+  font-size: 0.8rem;
+  font-weight: 850;
+}
+
+.conference-card > a:hover,
+.conference-card > a:focus-visible {
+  color: var(--orange);
 }
 
 .compact-heading {
@@ -1066,9 +1324,13 @@ a {
   top: 120px;
 }
 
-.people-heading > p:last-child {
+.people-heading > p:last-of-type {
   max-width: 430px;
   color: var(--muted);
+}
+
+.people-heading .text-link {
+  margin-top: 24px;
 }
 
 .people-list {
@@ -1118,6 +1380,104 @@ a {
 .people-list span {
   color: var(--muted);
   font-size: 0.86rem;
+}
+
+.people-directory-section {
+  background: var(--surface);
+}
+
+.people-directory-heading {
+  display: grid;
+  grid-template-columns: 1fr 0.65fr;
+  gap: 60px;
+  align-items: end;
+  margin-bottom: 56px;
+}
+
+.people-directory-heading h2 {
+  margin: 12px 0 0;
+  font-size: clamp(2.1rem, 4vw, 3.7rem);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.people-directory-heading > p {
+  max-width: 470px;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.people-directory {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.person-card {
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 0 18px 44px rgba(16, 39, 79, 0.06);
+}
+
+.person-card > img {
+  width: 100%;
+  aspect-ratio: 1;
+  display: block;
+  object-fit: cover;
+  background: #e8edf5;
+}
+
+.person-card-body {
+  padding: 28px;
+}
+
+.person-card-role {
+  margin: 0 0 8px;
+  color: var(--orange);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.person-card h2 {
+  margin: 0;
+  font-size: 1.55rem;
+  line-height: 1.18;
+  letter-spacing: -0.03em;
+}
+
+.person-card-contact {
+  min-height: 1.5em;
+  margin: 12px 0 0;
+  overflow-wrap: anywhere;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.person-card-contact a {
+  color: var(--blue);
+  font-weight: 700;
+}
+
+.person-card-contact a:hover,
+.person-card-contact a:focus-visible {
+  color: var(--orange);
+}
+
+.person-card-bio {
+  margin: 22px 0 0;
+  padding-top: 20px;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+  line-height: 1.72;
+}
+
+.people-directory .publication-error {
+  color: #a73318;
 }
 
 .join-section {
@@ -1351,6 +1711,20 @@ a {
     gap: 24px;
   }
 
+  .people-directory-heading {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .people-directory {
+    grid-template-columns: 1fr;
+  }
+
+  .conference-summary {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
   .publication-year-group {
     grid-template-columns: 1fr;
     gap: 28px;
@@ -1485,8 +1859,52 @@ a {
     font-size: clamp(3rem, 15vw, 4.5rem);
   }
 
-  .publication-tabs {
+  .publication-tabs,
+  .people-tabs {
     top: 70px;
+  }
+
+  .people-tabs .container {
+    gap: 24px;
+    overflow-x: auto;
+  }
+
+  .conference-tabs {
+    top: 70px;
+  }
+
+  .conference-tabs .container {
+    gap: 24px;
+  }
+
+  .conference-stats {
+    grid-template-columns: 1fr;
+    margin-bottom: 70px;
+  }
+
+  .conference-stats div + div {
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    border-left: 0;
+  }
+
+  .conference-cards {
+    padding-left: 34px;
+  }
+
+  .conference-cards::before {
+    left: 8px;
+  }
+
+  .conference-card {
+    padding: 24px;
+  }
+
+  .conference-card::before {
+    top: 29px;
+    left: -32px;
+    width: 10px;
+    height: 10px;
+    border-width: 4px;
   }
 
   .publication-archive-list {
